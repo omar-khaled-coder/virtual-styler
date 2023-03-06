@@ -9,4 +9,7 @@ class User < ApplicationRecord
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
   validates :first_name, presence: true, length: { maximum: 20 }
   validates :last_name, presence: true, length: { maximum: 50 }
+  has_one_attached :avatar
 end
+
+# Path: app/controllers/application_controller.rb
