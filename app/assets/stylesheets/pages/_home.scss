@@ -29,3 +29,38 @@
   height: 100vh;
   object-fit: fill;
 }
+
+.about-container1 {
+  display: flex;
+  padding-top: 50px;
+}
+
+.about-container2 {
+  display: flex;
+  padding-top: 50px;
+}
+
+.about-text {
+  width: 60vw;
+  background-color: rgb(215, 212, 212);
+  height: 50vh;
+}
+
+.button-div {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-div > a {
+  margin: 0px;
+}
+
+.about-text > p,h2 {
+  margin: 10px 250px;
+}
+
+.left-container > h2 {
+  margin-left: 80px;
+}
