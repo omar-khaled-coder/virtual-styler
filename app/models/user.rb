@@ -6,3 +6,5 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 end
+
+# Path: app/controllers/application_controller.rb
