@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+
+  root to: "pages#home"
+
+  get "/design", to: "pages#design"
+  get "/basket", to: "pages#basket"
+
+  post "/styles", to: "presets#styles"
+  get "/presets", to: "presets#presets"
+
 end
