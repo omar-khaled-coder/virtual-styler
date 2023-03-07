@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
-
-
+  skip_before_action :authenticate_user!, only: :home
 
   # beautiful landing page, has link to #design page
   def home
