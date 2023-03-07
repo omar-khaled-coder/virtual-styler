@@ -5,6 +5,11 @@ class PresetsController < ApplicationController
   def styles
   end
 
+  # post form
+  def generate_preset
+
+  end
+
   # display presets matched from the #styles form
   def presets
   end
