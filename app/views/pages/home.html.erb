@@ -2,15 +2,23 @@
 
   <div class="home-page-container">
     <div class="left-container">
-      <h1>Virtual Styler</h1>
-      <h2>Your personalized interior design experience.</h2>
-        <%= link_to "Launch Styler", design_path, class: "button" %>
+      <h1 class="mb-2">Your personalized interior design experience.</h1>
+      <p class="mb-4">Transform your space with our interior design services. Our experienced team works closely with you to create a personalized and functional design that reflects your unique style. From traditional to modern, we offer a range of design options to suit your preferences. Contact us today to start creating the home of your dreams!</p>
+        <div>
+          <%= link_to "Launch Styler", design_path, class: "button" %>
+        </div>
     </div>
+
     <div class="right-container">
-      <img class="banner-img" src="https://res.cloudinary.com/dxgkclowd/image/upload/v1678090275/960x0_uq7xhv.jpg" alt="">
+        <%= image_tag asset_path("main-banner.png"), class: "banner-img" %>
     </div>
   </div>
 
+  <div class="quote-section-container">
+    <p class="quote">
+      At our interior design services, we believe that a well-designed space can transform your quality of life. Contact us today to learn more about how we can help you create the perfect space for your lifestyle and needs.
+    </p>
+  </div>
 
   <div class="about-container1">
     <div class="about-text">
@@ -32,4 +40,9 @@
     </div>
   </div>
 
+  <div class="footer">
+    <p class="footer-notes">
+      At our interior design services, we believe that a well-designed space can transform your quality of life. Contact us today to learn more about how we can help you create the perfect space for your lifestyle and needs.
+    </p>
+  </div>
 </div>
