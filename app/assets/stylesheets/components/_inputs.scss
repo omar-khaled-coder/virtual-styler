@@ -1,0 +1,35 @@
+.input_info {
+  width: 35%;
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.input_info2 {
+  width: 40%;
+  height: 40%;
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+
+
+.no-margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.extra-space {
+  margin-bottom: 30px;
+}
+// .text-center {
+//   text-align: center;
+// }

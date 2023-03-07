@@ -1,5 +1,4 @@
-
-<div class="container" style ="padding:  40px 150px;  align-items:  flex-start;">
+<div class="container" style ="padding:  30px 120px;  align-items:  flex-start;">
 
   <h2 class="text-center">Sign up</h2>
   <div>
@@ -9,35 +8,39 @@
       <div class="form-inputs input_info2">
         <%= f.input :photo, as: :file %>
 
-        <div class="row g-3">
-          <div class="col">
-            <%= f.input :first_name,
+          <div class="row g-3">
+            <div class="col col-md-6">
+              <%= f.input :first_name,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "first_name" },
+                            label: false,
+                            placeholder: "First Name"%>
+            </div>
+
+            <div class="col col-md-6">
+              <%= f.input :last_name,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "last_name" },
+                            label: false,
+                            placeholder: "Last Name" %>
+            </div>
+          </div>
+
+          <div class="row g-3">
+
+              <%= f.input :email,
                           required: true,
                           autofocus: true,
-                          input_html: { autocomplete: "first_name" },
+                          input_html: { autocomplete: "email" },
                           label: false,
-                          placeholder: "First Name"%>
+                          placeholder: "Email" %>
+
           </div>
 
-          <div class="col">
-            <%= f.input :last_name,
-                          required: true,
-                          autofocus: true,
-                          input_html: { autocomplete: "last_name" },
-                          label: false,
-                          placeholder: "Last Name" %>
-          </div>
-
-          <div class="no-margin">
-            <%= f.input :email,
-                        required: true,
-                        autofocus: true,
-                        input_html: { autocomplete: "email" },
-                        label: false,
-                        placeholder: "Email" %>
-          </div>
-
-            <div class="col-md-6 no-margin">
+          <div class="row g-3">
+            <div class="col col-md-6">
               <%= f.input :password,
                           required: true,
                           hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -46,15 +49,20 @@
                           placeholder: "Password" %>
             </div>
 
-            <div class="col-md-6 no-margin">
+            <div class="col col-md-6">
               <%= f.input :password_confirmation,
                           required: true,
                           input_html: { autocomplete: "new-password" },
                           label: false,
                           placeholder: "Confirm Password" %>
             </div>
+
+          </div>
+
         </div>
+
     </div>
+
     <div class="form-actions text-center d-flex justify-content-center";>
       <%= f.button :submit, "Sign up", class: "button" %>
     </div>

@@ -16,3 +16,15 @@
   box-shadow: inset 0px 0px 5px black;
   color: black;
 }
+
+.link-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  a {
+    margin: 0;
+    padding: 0;
+  }
+}
