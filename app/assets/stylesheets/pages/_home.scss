@@ -63,27 +63,22 @@
 }
 
 .about-text {
-  width: 60vw;
   background-color: $light-gray;
   color: $gray;
-  height: 50vh;
 }
 
 .button-div {
   width: 40vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: row;
 }
 
-.button-div > a {
-  margin: 0px;
+.section-img {
+  width: 100%;
 }
 
-.about-text > p,h2 {
-  margin: 10px 250px;
-}
-
-.left-container > h2 {
-  margin-left: 80px;
+.home-row-2 {
+  margin-top: 0px;
 }
