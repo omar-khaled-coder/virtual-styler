@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get "/styles", to: "presets#styles"
   post "/styles", to: "presets#generate_preset"
   get "/presets", to: "presets#presets"
-
+  get "/payment", to: "pages#payment"
 end
