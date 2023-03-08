@@ -10,6 +10,7 @@ class PresetsController < ApplicationController
     if params[:style].present? && params[:room].present?
       sql_query = "style ILIKE :style AND room ILIKE :room"
       @preset = Preset.where(sql_query, style: "%#{params[:style]}%", room: "%#{params[:room]}%")
+      @preset = @preset[0]
     end
   end
 
