@@ -5,7 +5,7 @@
 
 
 
-<div class="styles-container" data-controller="update-form">
+<div class="container-fluid" data-controller="update-form">
   <form
     id="styles-form"
     action="submit"
@@ -13,14 +13,14 @@
     data-update-form-target="form"
   >
     <fieldset>
-      <legend>Choose your style</legend>
+      <legend class="style-legend">Pick your favourite style</legend>
         <div class="radio-container">
 
 
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card1">
               <input type="radio" id="card1" name="style" class="hide-checkbox" value="Modern">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Modern_Style.jpg", class: "style-img" %>
                 <h2 class="style-title">Modern</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -29,7 +29,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card2">
               <input type="radio" id="card2" name="style" class="hide-checkbox" value="Minimalistic">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Minimalistic_Style.jpg", class: "style-img" %>
                 <h2 class="style-title">Minimalistic</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -38,7 +38,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card3">
               <input type="radio" id="card3" name="style" class="hide-checkbox" value="Scandinavian">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Scandinavian_Style", class: "style-img" %>
                 <h2 class="style-title">Scandinavian</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -47,7 +47,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card4">
               <input type="radio" id="card4" name="style" class="hide-checkbox" value="Industrial">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Industrial_Style", class: "style-img" %>
                 <h2 class="style-title">Industrial</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -56,7 +56,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card5">
               <input type="radio" id="card5" name="style" class="hide-checkbox" value="Bohemian">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Bohemian_Style", class: "style-img" %>
                 <h2 class="style-title">Bohemian</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -65,7 +65,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card6">
               <input type="radio" id="card6" name="style" class="hide-checkbox" value="Coastal">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Coastal_Style", class: "style-img" %>
                 <h2 class="style-title">Coastal</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -74,7 +74,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card7">
               <input type="radio" id="card7" name="style" class="hide-checkbox" value="Traditional">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Traditional_Style", class: "style-img" %>
                 <h2 class="style-title">Traditional</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -83,7 +83,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card8">
               <input type="radio" id="card8" name="style" class="hide-checkbox" value="Mid-century">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Mid-century modern_Style", class: "style-img" %>
                 <h2 class="style-title">Mid-century</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -92,7 +92,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card9">
               <input type="radio" id="card9" name="style" class="hide-checkbox" value="Art deco">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Art_deco_Style", class: "style-img" %>
                 <h2 class="style-title">Art deco</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -101,7 +101,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card10">
               <input type="radio" id="card10" name="style" class="hide-checkbox" value="Rustic">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Rustic_Style", class: "style-img" %>
                 <h2 class="style-title">Rustic</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -110,7 +110,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card11">
               <input type="radio" id="card11" name="style" class="hide-checkbox" value="Shabby chic">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Shabby_Chic_Style", class: "style-img" %>
                 <h2 class="style-title">Shabby chic</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -119,7 +119,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card12">
               <input type="radio" id="card12" name="style" class="hide-checkbox" value="Urban">
-                <img class="style-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Favorite_Style/Urban_Style", class: "style-img" %>
                 <h2 class="style-title">Urban</h2>
                 <p class="style-description">Style description goes here.</p>
               </label>
@@ -132,14 +132,14 @@
     </fieldset>
 
     <fieldset class="room-type" data-update-form-target="rooms" id="rooms">
-      <legend>Choose your room</legend>
+      <legend class="room-legend"><span class="greyed-out">Pick your favourite style > </span>Pick a room to design</legend>
 
       <div class="radio-container2">
 
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room1">
               <input type="radio" id="room1" name="room" class="hide-checkbox" value="Living room">
-                <img class="room-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Modern_Rooms/Modern_LivingRooms", class: "room-img" %>
                 <h2 class="room-title">Living room</h2>
                 <p class="room-description">Room description goes here.</p>
             </label>
@@ -148,7 +148,7 @@
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room2">
               <input type="radio" id="room2" name="room" class="hide-checkbox" value="Kitchen">
-                <img class="room-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Modern_Rooms/Modern_Kitchen", class: "room-img" %>
                 <h2 class="room-title">Kitchen</h2>
                 <p class="room-description">Room description goes here.</p>
             </label>
@@ -157,7 +157,7 @@
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room3">
               <input type="radio" id="room3" name="room" class="hide-checkbox" value="Bathroom">
-                <img class="room-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Modern_Rooms/Modern_Bathrooms", class: "room-img" %>
                 <h2 class="room-title">Bathroom</h2>
                 <p class="room-description">Room description goes here.</p>
             </label>
@@ -166,7 +166,7 @@
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room4">
               <input type="radio" id="room4" name="room" class="hide-checkbox" value="Bedroom">
-                <img class="room-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Modern_Rooms/Modern_BedRoom", class: "room-img" %>
                 <h2 class="room-title">Bedroom</h2>
                 <p class="room-description">Room description goes here.</p>
             </label>
@@ -175,7 +175,7 @@
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room5">
               <input type="radio" id="room5" name="room" class="hide-checkbox" value="Office">
-                <img class="room-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Modern_Rooms/Modern_office s", class: "room-img" %>
                 <h2 class="room-title">Office</h2>
                 <p class="room-description">Room description goes here.</p>
             </label>
@@ -184,7 +184,7 @@
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room6">
               <input type="radio" id="room6" name="room" class="hide-checkbox" value="Nook">
-                <img class="room-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Banana_and_cross_section.jpg/2880px-Banana_and_cross_section.jpg" alt="">
+                <%= image_tag "Modern_Rooms/Modern_Nook", class: "room-img" %>
                 <h2 class="room-title">Nook</h2>
                 <p class="room-description">Room description goes here.</p>
             </label>

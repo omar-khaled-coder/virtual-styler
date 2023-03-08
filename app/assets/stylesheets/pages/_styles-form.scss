@@ -2,6 +2,7 @@
   width: 300px;
   height: 200px;
   object-fit: fill;
+  border-radius: 10px;
 }
 
 .hide-checkbox {
@@ -21,7 +22,7 @@
 
 .style-card {
   width: 300px;
-  margin: 10px 40px;
+  margin: 30px 40px;
   position: relative;
 }
 
@@ -32,6 +33,7 @@
   bottom: 0px;
   left: 5px;
   transition: bottom 0.3s;
+  color: white;
 }
 
 .style-description {
@@ -41,6 +43,7 @@
   left: 5px;
   display: none;
   transition: bottom 0.3s;
+  color: white;
 }
 
 .style-card:hover .style-description {
@@ -51,6 +54,23 @@
 .style-card:hover .style-title {
   bottom: 100px;
 }
+
+.style-card:hover .style-img {
+  filter: contrast(40%);
+  transition: 0.3s;
+}
+
+.style-legend {
+  margin: 40px 40px;
+  font-weight:900;
+  font-size: 2rem;
+}
+
+
+
+
+
+
 
 
 
@@ -70,22 +90,21 @@
 }
 
 .room-img {
-  width: 300px;
-  height: 200px;
-  object-fit: fill;
+   width: 430px;
+   height: 300px;
+   object-fit: fill;
+   border-radius: 10px;
 }
-
-
 
 
 
 .card-room {
-  width: 300px;
+  width: 400px;
 }
 
 .room-card {
-  width: 300px;
-  margin: 10px 40px;
+  width: 400px;
+  margin: 20px 40px;
   position: relative;
 }
 
@@ -96,6 +115,7 @@
   bottom: 0px;
   left: 5px;
   transition: bottom 0.3s;
+  color: white;
 }
 
 .room-description {
@@ -105,6 +125,7 @@
   left: 5px;
   display: none;
   transition: bottom 0.3s;
+  color: white;
 }
 
 .room-card:hover .room-description {
@@ -114,4 +135,23 @@
 
 .room-card:hover .room-title {
   bottom: 100px;
+}
+
+.room-type {
+  margin-bottom: 200px;
+}
+
+.room-card:hover .room-img {
+  filter: contrast(40%);
+  transition: 0.3s;
+}
+
+.room-legend {
+  margin: 40px 40px;
+  font-weight:900;
+  font-size: 2rem;
+}
+
+.greyed-out {
+  opacity: 0.7;
 }
