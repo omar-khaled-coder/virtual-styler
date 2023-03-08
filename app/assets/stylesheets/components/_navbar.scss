@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background-color: $light-gray;
+  position: sticky;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -34,9 +35,8 @@ ul{
   background-color: $light-gray;
   flex-direction: row;
   flex-grow: 0;
-
-
 }
+
 .navbar {
   justify-content: space-evenly;
 }
