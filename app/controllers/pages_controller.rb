@@ -11,6 +11,13 @@ class PagesController < ApplicationController
 
   # contains items added by the user
   def basket
+    @basket = Cart.create({
+      user_id: current_user.id
+    })
+  end
+
+  def payment
+
   end
 
 end
