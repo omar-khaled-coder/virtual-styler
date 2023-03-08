@@ -13,9 +13,5 @@
 @import "components/button";
 
 @import "pages/styles-form";
-
-h2 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
+@import "components/card_view_model";
+@import "components/scrollbar_model";
