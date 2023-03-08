@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true, length: { maximum: 20 }
   validates :last_name, presence: true, length: { maximum: 50 }
   has_one_attached :avatar
+  has_one :cart
 end
 
 # Path: app/controllers/application_controller.rb
