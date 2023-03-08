@@ -1,5 +1,19 @@
 <h1>presets</h1>
 
+<% if @preset === nil  %>
+ <h1>Bananas, nothing matched query</h1>
+<% else %>
+
+ <% @preset.items.each do |item| %>
+    <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill %>
+ <% end %>
+
+
+<% end %>
+
+
+
+
 <div class="d-flex">
   <h3 style="color:gray;">Pick your favorite style > Pick a room to design</h3>
   <h3 style="white-space: nowrap;" >> Pick a design<h3>
@@ -83,3 +97,4 @@
 
   </div>
 </div>
+
