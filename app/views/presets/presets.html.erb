@@ -1,9 +1,13 @@
 <h1>presets</h1>
 
 
-<% !if @preset.length === 1  %>
-  <%= @preset[0].style %>
-  <%= @preset[0].room %>
-  <% else %>
+<% if @preset === nil  %>
  <h1>Bananas, nothing matched query</h1>
-  <% end %>
+<% else %>
+
+ <% @preset.items.each do |item| %>
+    <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill %>
+ <% end %>
+
+
+<% end %>
