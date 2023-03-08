@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>VirtualStyler</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <%= favicon_link_tag %>
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,7 +13,7 @@
   </head>
 
   <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+    <%= render "shared/flashes" %>
 
     <%= yield %>
   </body>
