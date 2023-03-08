@@ -1,1 +1,9 @@
 <h1>presets</h1>
+
+
+<% !if @preset.length === 1  %>
+  <%= @preset[0].style %>
+  <%= @preset[0].room %>
+  <% else %>
+ <h1>Bananas, nothing matched query</h1>
+  <% end %>

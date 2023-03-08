@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/basket", to: "pages#basket"
 
   get "/styles", to: "presets#styles"
-  post "/styles", to: "presets#generate_preset"
+
   get "/presets", to: "presets#presets"
 
 end
