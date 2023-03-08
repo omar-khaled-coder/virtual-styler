@@ -1,16 +1,18 @@
 <div class="main-container">
 
   <div class="home-page-container">
-    <div class="left-container">
-      <h1 class="mb-2">Your personalized interior design experience.</h1>
-      <p class="mb-4">Transform your space with our interior design services. Our experienced team works closely with you to create a personalized and functional design that reflects your unique style. From traditional to modern, we offer a range of design options to suit your preferences. Contact us today to start creating the home of your dreams!</p>
-        <div>
-          <%= link_to "Launch Styler", design_path, class: "button" %>
-        </div>
-    </div>
+    <div class="container container-flex">
+      <div class="left-container">
+        <h1 class="mb-2">Your personalized interior design experience.</h1>
+        <p class="mb-4">Transform your space with our interior design services. Our experienced team works closely with you to create a personalized and functional design that reflects your unique style. From traditional to modern, we offer a range of design options to suit your preferences. Contact us today to start creating the home of your dreams!</p>
+          <div>
+            <%= link_to "Launch Styler", design_path, class: "button" %>
+          </div>
+      </div>
 
-    <div class="right-container">
-        <%= image_tag asset_path("main-banner.png"), class: "banner-img" %>
+      <div class="right-container">
+          <%= image_tag asset_path("main-banner.png"), class: "banner-img" %>
+      </div>
     </div>
   </div>
 
@@ -20,81 +22,68 @@
     </p>
   </div>
 
+  <div class="container">
+    <div class="row">
 
-  <div class="row">
-    <div class="col-2">
-    </div>
-
-    <div class="col-3">
-          <%= image_tag asset_path("custom-design.png"), class: "section-img" %>
-    </div>
-
-    <div class="col-1">
-    </div>
-
-    <div class="col-4">
-      <div class="about-container1">
-        <div class="about-text">
-          <h2>HandPicked for you</h2>
-          <p>One of the main advantages of offering users a choice between a multitude of pre-designed spaces is that it saves them time and effort. Not everyone has the time or expertise to design their own space from scratch, and having pre-designed spaces to choose from allows them to quickly and easily find a style that suits their tastes and needs. Pre-designed spaces also provide users with inspiration and ideas, helping them to envision the possibilities for their own space. Additionally, pre-designed spaces can help users avoid costly mistakes by ensuring that the furniture and accessories they choose are complementary and cohesive.</p>
-          <div class="button-div">
-          <%= link_to "Launch Styler", design_path, class: "button" %>
-          </div>
-        </div>
+      <div class="col-lg-4 col-md-5 col-sm-12">
+        <%= image_tag asset_path("custom-design.png"), class: "section-img" %>
       </div>
-    </div>
 
-    <div class="col-2">
-    </div>
-  </div>
-
-  <div class="row home-row-2 mt-5 mb-5">
-    <div class="col-2">
-    </div>
-
-    <div class="col-4">
-      <div class="about-container1">
-        <div class="about-text">
-          <h2>Custom Design</h2>
-          <p>One of the main advantages of offering users a choice between a multitude of pre-designed spaces is that it saves them time and effort. Not everyone has the time or expertise to design their own space from scratch, and having pre-designed spaces to choose from allows them to quickly and easily find a style that suits their tastes and needs. Pre-designed spaces also provide users with inspiration and ideas, helping them to envision the possibilities for their own space. Additionally, pre-designed spaces can help users avoid costly mistakes by ensuring that the furniture and accessories they choose are complementary and cohesive.</p>
-          <div class="button-div">
+      <div class="col-lg-8 col-md-7 col-sm-12">
+        <div class="about-container1">
+          <div class="about-text">
+            <h2>HandPicked for you</h2>
+            <p>One of the main advantages of offering users a choice between a multitude of pre-designed spaces is that it saves them time and effort. Not everyone has the time or expertise to design their own space from scratch, and having pre-designed spaces to choose from allows them to quickly and easily find a style that suits their tastes and needs. Pre-designed spaces also provide users with inspiration and ideas, helping them to envision the possibilities for their own space. Additionally, pre-designed spaces can help users avoid costly mistakes by ensuring that the furniture and accessories they choose are complementary and cohesive.</p>
+            <div class="button-div">
             <%= link_to "Launch Styler", design_path, class: "button" %>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-1">
+    <div class="row home-row-2 mt-5 mb-5">
+      <div class="col-lg-8 col-md-7 col-sm-12 order-md-1 order-sm-2">
+        <div class="about-container1">
+          <div class="about-text">
+            <h2>Custom Design</h2>
+            <p>One of the main advantages of offering users a choice between a multitude of pre-designed spaces is that it saves them time and effort. Not everyone has the time or expertise to design their own space from scratch, and having pre-designed spaces to choose from allows them to quickly and easily find a style that suits their tastes and needs. Pre-designed spaces also provide users with inspiration and ideas, helping them to envision the possibilities for their own space. Additionally, pre-designed spaces can help users avoid costly mistakes by ensuring that the furniture and accessories they choose are complementary and cohesive.</p>
+            <div class="button-div">
+              <%= link_to "Launch Styler", design_path, class: "button" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-5 col-sm-12 order-md-2 order-sm-1">
+            <%= image_tag asset_path("handcrafted.png"), class: "section-img" %>
+      </div>
+    </div>
     </div>
 
-    <div class="col-3">
-          <%= image_tag asset_path("handcrafted.png"), class: "section-img" %>
-    </div>
 
-    <div class="col-2">
-    </div>
-  </div>
-
-  <div class="footer">
-    <ul>
-      <li>Random Link</li>
-      <li>Another one</li>
-      <li>One Link</li>
-    </ul>
-    <ul>
-      <li>Here's more</li>
-      <li>Contact</li>
-      <li>Link for contact</li>
-    </ul>
-     <ul>
-      <li>Some link</li>
-      <li>Info</li>
-      <li>FAQ</li>
-    </ul>
-    <ul>
-      <li>Links and links</li>
-      <li>Another random link</li>
-      <li>Maybe a last one</li>
-    </ul>
+    <div class="footer-container">
+      <div class="container footer">
+        <ul>
+          <li>Random Link</li>
+          <li>Another one</li>
+          <li>One Link</li>
+        </ul>
+        <ul>
+          <li>Here's more</li>
+          <li>Contact</li>
+          <li>Link for contact</li>
+        </ul>
+        <ul>
+          <li>Some link</li>
+          <li>Info</li>
+          <li>FAQ</li>
+        </ul>
+        <ul>
+          <li>Links and links</li>
+          <li>Another random link</li>
+          <li>Maybe a last one</li>
+        </ul>
+      </div>
   </div>
 </div>
