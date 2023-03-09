@@ -16,7 +16,8 @@
 
             <form id="preset-form"
                   action="/"
-                  method="GET">
+                  method="GET"
+                  data-controller="count-item">
                 <div>
                   <% @preset.items.each do | item | %>
                     <div class="d-flex item-card align-items-center ms-5 mb-2">
@@ -27,9 +28,9 @@
                       </p>
                       <div class="cart-input ms-auto me-5 mb-3 d-flex flex-column">
                         <div class="d-flex ">
-                          <button class="minus">-</button>
-                           <input type="text" value="1" class="cart-input" name="<%= item.id %>">
-                          <button class="plus">+</button>
+                          <button class="minus" type="button" data-action="click->count-item#minus">-</button>
+                           <input type="text" value="1" class="cart-input" name="<%= item.id %>" data-count-item-target="input">
+                          <button class="plus" type="button" data-action="click->count-item#add">+</button>
                         </div>
                         <p class="item-price"> <%="$ #{item.price}"%></p>
                       </div>

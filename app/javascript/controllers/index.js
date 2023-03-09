@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import CountItemController from "./count_item_controller"
+application.register("count-item", CountItemController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
