@@ -1,4 +1,4 @@
-<div class="container" style ="padding:  30px 120px;  align-items:  flex-start;">
+<div class="container" style ="max-width:42vw; align-items:  flex-start;">
 
   <h2 class="text-center h2class">Sign up</h2>
   <div>
@@ -8,8 +8,8 @@
       <div class="form-inputs input_info2">
         <%= f.input :photo, as: :file %>
 
-          <div class="row g-3">
-            <div class="col col-md-6">
+          <div class="row g-3 ">
+            <div class="col-12 col-md-6">
               <%= f.input :first_name,
                             required: true,
                             autofocus: true,
@@ -18,7 +18,7 @@
                             placeholder: "First Name"%>
             </div>
 
-            <div class="col col-md-6">
+            <div class="col-12 col-md-6">
               <%= f.input :last_name,
                             required: true,
                             autofocus: true,
@@ -40,7 +40,7 @@
           </div>
 
           <div class="row g-3">
-            <div class="col col-md-6">
+            <div class="col-12 col-md-6">
               <%= f.input :password,
                           required: true,
                           hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -49,7 +49,7 @@
                           placeholder: "Password" %>
             </div>
 
-            <div class="col col-md-6">
+            <div class="col-12 col-md-6">
               <%= f.input :password_confirmation,
                           required: true,
                           input_html: { autocomplete: "new-password" },
