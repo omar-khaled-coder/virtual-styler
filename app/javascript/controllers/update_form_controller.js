@@ -7,7 +7,7 @@ export default class extends Controller {
 
 
   scroll() {
-    this.roomsTarget.scrollIntoView({ behavior: "smooth" })
+    this.roomsTarget.scrollIntoView({ behavior: "auto" })
     // console.log("scroll")
   }
 
