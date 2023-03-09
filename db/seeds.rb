@@ -1,10 +1,17 @@
 
 require 'open-uri'
 
+puts "destoying carts_items"
+CartItem.destroy_all
+puts "carts_items destroyed"
+
+puts "destoying carts"
+Cart.destroy_all
+puts "carts destroyed"
+
 puts "destoying preset_items"
 PresetItem.destroy_all
 puts "preset_items destroyed"
-
 
 puts "destoying users"
 User.destroy_all
@@ -248,8 +255,9 @@ modern_curtains = Item.create({
 modern_curtains.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256308/White_Curtain_LivingRoom_be0m9z.jpg')), filename: 'modern_curtains', content_type: 'image/png')
 puts "created modern sofa"
 
-puts "created modern living room elements"
 # white paint dublicate !!!!!!!
+
+puts "created modern living room elements"
 
 
 
