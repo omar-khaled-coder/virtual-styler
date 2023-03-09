@@ -10,5 +10,8 @@ application.register("count-item", CountItemController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import TotalPriceController from "./total_price_controller"
+application.register("total-price", TotalPriceController)
+
 import UpdateFormController from "./update_form_controller"
 application.register("update-form", UpdateFormController)

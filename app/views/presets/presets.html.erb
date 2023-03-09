@@ -15,10 +15,12 @@
               <%= cl_image_tag @preset.photo.key, :width => 900, :height=>600, :crop => "fill" %>
 
             <form id="preset-form"
-                  action="/"
+                  action="/basket"
                   method="GET"
-                  data-controller="count-item">
+                  data-controller="count-item"
+                  >
                 <div>
+                <div data-controller="total-price">
                   <% @preset.items.each do | item | %>
                     <div class="d-flex item-card align-items-center ms-5 mb-2">
                       <%= cl_image_tag item.photo.key, :width=>80,:height=>80, :crop=>"fill", class: "item-image p-2" %>
@@ -28,16 +30,17 @@
                       </p>
                       <div class="cart-input ms-auto me-5 mb-3 d-flex flex-column">
                         <div class="d-flex ">
-                          <button class="minus" type="button" data-action="click->count-item#minus">-</button>
-                           <input type="text" value="1" class="cart-input" name="<%= item.id %>" data-count-item-target="input">
-                          <button class="plus" type="button" data-action="click->count-item#add">+</button>
+                          <button class="minus" type="button" data-action="click->count-item#minus click->total-price#update" >-</button>
+                           <input type="text" value="0" class="cart-input" name="<%= item.id %>" data-count-item-target="input" data-total-price-target="input">
+                          <button class="plus" type="button" data-action="click->count-item#add click->total-price#update">+</button>
                         </div>
-                        <p class="item-price"> <%="$ #{item.price}"%></p>
+                        <p class="item-price">$ <span data-total-price-target="unitprice"><%= item.price%></span></p>
                       </div>
                     </div>
                   <% end %>
+                  <div class="total">Your total is : $ <span data-total-price-target="total">0</span></div>
                 </div>
-
+                </div>
               <input type="submit" value="Submit">
             </form>
 
@@ -50,5 +53,3 @@
 
 
 </div>
-
-<%= console %>

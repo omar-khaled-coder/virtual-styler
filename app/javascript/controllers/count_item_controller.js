@@ -5,17 +5,17 @@ export default class extends Controller {
 
   static targets = ["input"]
 
-  add() {
-    let input_value = this.inputTarget.value
+  add(e) {
+    let input_value = e.currentTarget.previousElementSibling.value
     input_value = parseInt(input_value)
     input_value += 1
-    this.inputTarget.value =  input_value.toString()
+    e.currentTarget.previousElementSibling.value =  input_value.toString()
   }
 
-  minus() {
-    let input_value = this.inputTarget.value
+  minus(e) {
+    let input_value = e.currentTarget.nextElementSibling.value
     input_value = parseInt(input_value)
     input_value === 0 ? input_value -= 0 : input_value -= 1
-    this.inputTarget.value =  input_value.toString()
+    e.currentTarget.nextElementSibling.value =  input_value.toString()
   }
 }
