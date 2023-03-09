@@ -65,7 +65,7 @@ puts "creating items for the modern bedroom"
 modern_bed = Item.create({
   name: "Modern Bed",
   price: 300,
-  description: "Very comfortable modern bed"
+  description: "20 x 40 x 120"
 })
 modern_bed.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Bed_BedRoom_lqyftq.jpg')), filename: 'modern_bed.png', content_type: 'image/png')
 puts "created modern bed"
@@ -73,7 +73,7 @@ puts "created modern bed"
 modern_nightstand = Item.create({
   name: "Modern nightstand",
   price: 220,
-  description: "Very comfortable modern nightstand"
+  description: "20 x 40 x 120"
 })
 modern_nightstand.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Nightstand_BedRoom_mtme3k.jpg')), filename: 'modern_nightstand.png', content_type: 'image/png')
 puts "created modern nightstand"
@@ -81,7 +81,7 @@ puts "created modern nightstand"
 modern_floor = Item.create({
   name: "Modern floor",
   price: 30,
-  description: "Very comfortable modern floor"
+  description: "20 x 40 x 120"
 })
 modern_floor.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250022/Floor_BedRoom_kuwvrx.jpg')), filename: 'modern_floor.png', content_type: 'image/png')
 puts "created modern floor"
@@ -89,7 +89,7 @@ puts "created modern floor"
 modern_dresser = Item.create({
   name: "Modern dresser",
   price: 450,
-  description: "Very comfortable modern dresser"
+  description: "20 x 40 x 120"
 })
 modern_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Tall_Dresser__BedRoom_y7yviq.jpg')), filename: 'modern_dresser.png', content_type: 'image/png')
 puts "created modern dresser"
@@ -97,7 +97,7 @@ puts "created modern dresser"
 modern_lamp = Item.create({
   name: "Modern lamp",
   price: 50,
-  description: "Very comfortable modern lamp"
+  description: "20 x 40 x 120"
 })
 modern_lamp.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250021/Lamp-stone_BedRoom_s_ly2ltw.jpg')), filename: 'modern_lamp.png', content_type: 'image/png')
 puts "created modern lamp"
@@ -105,7 +105,7 @@ puts "created modern lamp"
 white_paint = Item.create({
   name: "White paint",
   price: 50,
-  description: "Very white white paint"
+  description: "20 x 40 x 120"
 })
 white_paint.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/White_Paint_BedRoom_pdjz9i.jpg')), filename: 'white_paint.png', content_type: 'image/png')
 puts "created white paint"
@@ -113,7 +113,7 @@ puts "created white paint"
 modern_short_dresser = Item.create({
   name: "Short modern dresser",
   price: 380,
-  description: "Very comfortable modern short dresser"
+  description: "20 x 40 x 120"
 })
 modern_short_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Dresser_BedRoom_iif32a.jpg')), filename: 'modern_short_dresser', content_type: 'image/png')
 puts "created modern short dresser"
@@ -189,7 +189,7 @@ puts "creating items for the modern living room"
 modern_closet = Item.create({
   name: "Modern Closet",
   price: 260,
-  description: "Very comfortable modern closet"
+  description: "20 x 40 x 120"
 })
 modern_closet.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256308/Closet_LivingRoom_qywqlr.jpg')), filename: 'modern_closet.png', content_type: 'image/png')
 puts "created modern closet"
@@ -198,7 +198,7 @@ puts "created modern closet"
 modern_coffee_table1 = Item.create({
   name: "Modern coffee table",
   price: 40,
-  description: "Very comfortable modern coffee table"
+  description: "20 x 40 x 120"
 })
 modern_coffee_table1.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256308/Coffee_Table_LivingRoom_qhnav4.jpg')), filename: 'modern_coffee_table1.png', content_type: 'image/png')
 puts "created modern small coffee table 1"
@@ -207,7 +207,7 @@ puts "created modern small coffee table 1"
 modern_coffee_table2 = Item.create({
   name: "Modern coffee table",
   price: 60,
-  description: "Very comfortable modern coffee table"
+  description: "20 x 40 x 120"
 })
 modern_coffee_table2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256307/Coffee_table_LivingRoom_txkalz.png')), filename: 'modern_coffee_table2.png', content_type: 'image/png')
 puts "created modern coffee table 2"
@@ -216,7 +216,7 @@ puts "created modern coffee table 2"
 modern_wood_floor = Item.create({
   name: "Modern wood floor",
   price: 30,
-  description: "Very comfortable modern wood floor"
+  description: "20 x 40 x 120"
 })
 modern_wood_floor.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256307/Floor_LivingRoom_bbpxkq.jpg')), filename: 'modern_wood_floor', content_type: 'image/png')
 puts "created modern wood floor"
@@ -225,7 +225,7 @@ puts "created modern wood floor"
 modern_lamp = Item.create({
   name: "Modern lamp",
   price: 67,
-  description: "Very comfortable modern lamp"
+  description: "20 x 40 x 120"
 })
 modern_lamp.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256308/Lamp_LivingRoom_bizkxj.jpg')), filename: 'modern_lamp', content_type: 'image/png')
 puts "created modern lamp"
@@ -234,7 +234,7 @@ puts "created modern lamp"
 modern_sofa = Item.create({
   name: "Modern sofa",
   price: 67,
-  description: "Very comfortable modern sofa"
+  description: "20 x 40 x 120"
 })
 modern_sofa.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256308/Sofa_LivingRoom_icyvvx.jpg')), filename: 'modern_sofa', content_type: 'image/png')
 puts "created modern sofa"
@@ -243,7 +243,7 @@ puts "created modern sofa"
 modern_curtains = Item.create({
   name: "Modern curtains",
   price: 84,
-  description: "Very comfortable modern curtains"
+  description: "20 x 40 x 120"
 })
 modern_curtains.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256308/White_Curtain_LivingRoom_be0m9z.jpg')), filename: 'modern_curtains', content_type: 'image/png')
 puts "created modern sofa"
