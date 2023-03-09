@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import BasketSumController from "./basket_sum_controller"
+application.register("basket-sum", BasketSumController)
+
 import CountItemController from "./count_item_controller"
 application.register("count-item", CountItemController)
 
