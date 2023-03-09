@@ -1,3 +1,27 @@
-<h1>basket</h1>
 
-<%= @basket %>
+
+
+
+
+
+
+
+
+
+<div data-controller="total-price">
+  <%@cart_items.each do |cart_item|%>
+    <div class="d-flex item-card align-items-center ms-5 mb-2">
+      <%= cl_image_tag cart_item.item.photo.key, :width=>80,:height=>80, :crop=>"fill", class: "item-image p-2"  %>
+      <p class="mt-3 me-5 ps-2"><span class="item-name"><%= cart_item.item.name %></span>
+      <br>
+      <span class="item-description"><%= cart_item.item.description %></span>
+      </p>
+      <div class="cart-input ms-auto me-5 mb-3 d-flex flex-column">
+      <div class="d-flex ">
+        <div> x<%= cart_item.quantity %></div>
+      </div>
+      <p class="item-price">$ <span data-total-price-target="unitprice"><%= cart_item.item.price%></span></p>
+      </div>
+    </div>
+  <% end %>
+<div class="total">Your total is : $ <span data-total-price-target="total">0</span></div>
