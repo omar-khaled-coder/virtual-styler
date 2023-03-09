@@ -5,9 +5,6 @@ export default class extends Controller {
 
   static targets = ["unitprice", "input", "total"]
 
-  // connect(){
-  //   console.log("banana");
-  // }
 
   update() {
 
