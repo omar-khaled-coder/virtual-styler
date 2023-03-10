@@ -146,33 +146,33 @@ modern_preset1 = PresetItem.create({
 })
 
 modern_preset2 = PresetItem.create({
-  preset_id: modern_nightstand.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_nightstand.id
 })
 
 modern_preset3 = PresetItem.create({
-  preset_id: modern_floor.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_floor.id
 })
 
 modern_preset4 = PresetItem.create({
-  preset_id: modern_dresser.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_dresser.id
 })
 
 modern_preset5 = PresetItem.create({
-  preset_id: modern_lamp.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_lamp.id
 })
 
 modern_preset6 = PresetItem.create({
-  preset_id: white_paint.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: white_paint.id
 })
 
 modern_preset7 = PresetItem.create({
-  preset_id: modern_short_dresser.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_short_dresser.id
 })
 
 puts "created preset_items for mdoern bedroom"
