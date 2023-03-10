@@ -1,19 +1,14 @@
-
-
-
-
-
-
-
 <div class="container" data-controller="update-form">
+<legend class="style-legend"><span class="greyed-out"></span><span class="greyed-in">Pick a style > </span></legend>
+
+<h2 class="pt-4">Pick your style</h2>
   <form
     id="styles-form"
     action="/presets"
     method="GET"
     data-update-form-target="form"
   >
-   <h2 class="pt-4">Pick your style</h2>
-    <fieldset>
+    <fieldset class ="fieldset-1">
         <div class="radio-container">
 
 
@@ -130,12 +125,10 @@
 
 
     </fieldset>
+      <legend class="style-legend"><span class="greyed-out">Pick a style </span><span class="greyed-in">> Pick a room</span></legend>
+      <h2 class="pt-4">Pick a room to design</h2>
 
     <fieldset class="room-type" data-update-form-target="rooms" id="rooms">
-      <span></span>
-      <br>
-      <br>
-      <legend class="room-legend"><span class="greyed-out">Pick your favourite style > </span><span class="greyed-in">Pick a room to design</span></legend>
 
       <div class="radio-container2">
 
@@ -192,9 +185,6 @@
                 <p class="room-description">Sheltered and secluded place and a place for privacy, peace and quiet.</p>
             </label>
         </div>
-
-
-
       </div>
     </fieldset>
   </form>
