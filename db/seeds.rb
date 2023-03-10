@@ -193,7 +193,7 @@ puts "modern living room photo attached"
 
 
 puts "creating items for the modern living room"
-modern_closet = Item.create({
+modern_closet = Item.create!({
   name: "Modern Closet",
   price: 260,
   description: "20 x 40 x 120"
@@ -202,7 +202,7 @@ modern_closet.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dx
 puts "created modern closet"
 
 
-modern_coffee_table1 = Item.create({
+modern_coffee_table1 = Item.create!({
   name: "Modern coffee table",
   price: 40,
   description: "20 x 40 x 120"
@@ -211,7 +211,7 @@ modern_coffee_table1.photo.attach(io: File.open(URI.open('https://res.cloudinary
 puts "created modern small coffee table 1"
 
 
-modern_coffee_table2 = Item.create({
+modern_coffee_table2 = Item.create!({
   name: "Modern coffee table",
   price: 60,
   description: "20 x 40 x 120"
@@ -220,7 +220,7 @@ modern_coffee_table2.photo.attach(io: File.open(URI.open('https://res.cloudinary
 puts "created modern coffee table 2"
 
 
-modern_wood_floor = Item.create({
+modern_wood_floor = Item.create!({
   name: "Modern wood floor",
   price: 30,
   description: "20 x 40 x 120"
@@ -229,7 +229,7 @@ modern_wood_floor.photo.attach(io: File.open(URI.open('https://res.cloudinary.co
 puts "created modern wood floor"
 
 
-modern_lamp = Item.create({
+modern_lamp = Item.create!({
   name: "Modern lamp",
   price: 67,
   description: "20 x 40 x 120"
@@ -238,7 +238,7 @@ modern_lamp.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgk
 puts "created modern lamp"
 
 
-modern_sofa = Item.create({
+modern_sofa = Item.create!({
   name: "Modern sofa",
   price: 67,
   description: "20 x 40 x 120"
@@ -247,7 +247,7 @@ modern_sofa.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgk
 puts "created modern sofa"
 
 
-modern_curtains = Item.create({
+modern_curtains = Item.create!({
   name: "Modern curtains",
   price: 84,
   description: "20 x 40 x 120"
