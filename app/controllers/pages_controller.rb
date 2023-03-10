@@ -25,10 +25,13 @@ class PagesController < ApplicationController
     end
   end
 
+  def paymentdone
+
+  end
 
 
-def custom
+  def custom
 
-end
+  end
 
 end
