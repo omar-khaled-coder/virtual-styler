@@ -1,0 +1,31 @@
+/* The page occupies 100% of the screen */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* The content occupies the entire space available */
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Transform the page into a 2-column grid */
+#holder {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+
+/* The right grid contains the model and occupies 50% of the available space */
+model-viewer {
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.custom-title {
+  text-align: center;
+  margin-top: 40px;
+}
