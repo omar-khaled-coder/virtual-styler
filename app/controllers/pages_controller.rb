@@ -27,13 +27,8 @@ class PagesController < ApplicationController
 
 
 
+def custom
 
-
-
-
-
-  def payment
-
-  end
+end
 
 end
