@@ -1,19 +1,14 @@
-
-
-
-
-
-
-
 <div class="container" data-controller="update-form">
+<legend class="style-legend"><span class="greyed-out"></span><span class="greyed-in">Pick a style > </span></legend>
+
+<h2 class="pt-4">Pick your style</h2>
   <form
     id="styles-form"
     action="/presets"
     method="GET"
     data-update-form-target="form"
   >
-   <h2 class="pt-4">Pick your style</h2>
-    <fieldset>
+    <fieldset class ="fieldset-1">
         <div class="radio-container">
 
 
@@ -38,7 +33,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card3">
               <input type="radio" id="card3" name="style" class="hide-checkbox" value="Scandinavian">
-                <%= image_tag "Favorite_Style/Scandinavian_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Scandinavian_Style.jpg", class: "style-img" %>
                 <h2 class="style-title">Scandinavian</h2>
                 <p class="style-description">This style is known for its simplicity, functionality, and use of natural materials. Scandinavian design often features a light color palette, clean lines, and cozy textures.</p>
               </label>
@@ -47,7 +42,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card4">
               <input type="radio" id="card4" name="style" class="hide-checkbox" value="Industrial">
-                <%= image_tag "Favorite_Style/Industrial_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Industrial_Style.webp", class: "style-img" %>
                 <h2 class="style-title">Industrial</h2>
                 <p class="style-description">Industrial design is characterized by exposed brick walls, metal piping, and raw materials. It often features a color palette of neutral tones and raw, unfinished textures.</p>
               </label>
@@ -56,7 +51,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card5">
               <input type="radio" id="card5" name="style" class="hide-checkbox" value="Bohemian">
-                <%= image_tag "Favorite_Style/Bohemian_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Bohemian_Style.jpeg", class: "style-img" %>
                 <h2 class="style-title">Bohemian</h2>
                 <p class="style-description">Bohemian style is all about a free-spirited, eclectic mix of colors, patterns, and textures. It often incorporates elements from different cultures and eras.</p>
               </label>
@@ -65,7 +60,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card6">
               <input type="radio" id="card6" name="style" class="hide-checkbox" value="Coastal">
-                <%= image_tag "Favorite_Style/Coastal_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Coastal_Style.webp", class: "style-img" %>
                 <h2 class="style-title">Coastal</h2>
                 <p class="style-description">Coastal design is inspired by the ocean and the beach. It often features light, airy colors and natural materials like wood and wicker.</p>
               </label>
@@ -74,7 +69,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card7">
               <input type="radio" id="card7" name="style" class="hide-checkbox" value="Traditional">
-                <%= image_tag "Favorite_Style/Traditional_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Traditional_Style.jpeg", class: "style-img" %>
                 <h2 class="style-title">Traditional</h2>
                 <p class="style-description">This style is characterized by classic, timeless designs, and a focus on elegance and sophistication. Traditional interiors often feature ornate furniture and textiles, and a muted color palette.</p>
               </label>
@@ -83,7 +78,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card8">
               <input type="radio" id="card8" name="style" class="hide-checkbox" value="Mid-century">
-                <%= image_tag "Favorite_Style/Mid-century modern_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Mid-century modern_Style.jpeg", class: "style-img" %>
                 <h2 class="style-title">Mid-century</h2>
                 <p class="style-description">Mid-century modern design emerged in the mid-20th century and is characterized by a focus on simplicity, function, and clean lines. It often features bold pops of color and a mix of materials like wood, metal, and glass.</p>
               </label>
@@ -92,7 +87,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card9">
               <input type="radio" id="card9" name="style" class="hide-checkbox" value="Art deco">
-                <%= image_tag "Favorite_Style/Art_deco_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Art_deco_Style.jpg", class: "style-img" %>
                 <h2 class="style-title">Art deco</h2>
                 <p class="style-description">Art deco design is inspired by the glamour and opulence of the 1920s and 1930s. It features bold geometric shapes, luxurious materials, and a strong emphasis on symmetry.</p>
               </label>
@@ -101,7 +96,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card10">
               <input type="radio" id="card10" name="style" class="hide-checkbox" value="Rustic">
-                <%= image_tag "Favorite_Style/Rustic_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Rustic_Style.jpg", class: "style-img" %>
                 <h2 class="style-title">Rustic</h2>
                 <p class="style-description">Rustic design is all about embracing natural materials and textures like wood, stone, and metal. It often features warm, earthy colors and a cozy, inviting feel.</p>
               </label>
@@ -110,7 +105,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card11">
               <input type="radio" id="card11" name="style" class="hide-checkbox" value="Shabby chic">
-                <%= image_tag "Favorite_Style/Shabby_Chic_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Shabby_Chic_Style.jpg", class: "style-img" %>
                 <h2 class="style-title">Shabby chic</h2>
                 <p class="style-description">Shabby chic design is characterized by a vintage, worn-in look. It often features distressed furniture and soft, muted colors.</p>
               </label>
@@ -119,7 +114,7 @@
           <div class="style-card" data-action="click->update-form#scroll">
               <label for="card12">
               <input type="radio" id="card12" name="style" class="hide-checkbox" value="Urban">
-                <%= image_tag "Favorite_Style/Urban_Style", class: "style-img" %>
+                <%= image_tag "Favorite_Style/Urban_Style.jpg", class: "style-img" %>
                 <h2 class="style-title">Urban</h2>
                 <p class="style-description">Urban style in interior design is raw and industrial, mixing vintage and contemporary elements with neutral colors and bold accents.</p>
               </label>
@@ -130,71 +125,66 @@
 
 
     </fieldset>
+      <legend class="style-legend"><span class="greyed-out">Pick a style </span><span class="greyed-in">> Pick a room</span></legend>
+      <h2 class="pt-4">Pick a room to design</h2>
 
     <fieldset class="room-type" data-update-form-target="rooms" id="rooms">
-      <span></span>
-      <br>
-      <br>
-      <legend class="room-legend"><span class="greyed-out">Pick your favourite style > </span><span class="greyed-in">Pick a room to design</span></legend>
 
       <div class="radio-container2">
 
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room1">
               <input type="radio" id="room1" name="room" class="hide-checkbox" value="Living room">
-                <%= image_tag "Modern_Rooms/Modern_LivingRooms", class: "room-img" %>
+                <%= image_tag "Modern_Rooms/Modern_LivingRooms.jpg", class: "room-img" %>
                 <h2 class="room-title">Living room</h2>
-                <p class="room-description">Room description goes here.</p>
+                <p class="room-description">A living room is used for entertaining friends, talking, reading, or watching television.</p>
             </label>
         </div>
 
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room2">
               <input type="radio" id="room2" name="room" class="hide-checkbox" value="Kitchen">
-                <%= image_tag "Modern_Rooms/Modern_Kitchen", class: "room-img" %>
+                <%= image_tag "Modern_Rooms/Modern_Kitchen.jpeg", class: "room-img" %>
                 <h2 class="room-title">Kitchen</h2>
-                <p class="room-description">Room description goes here.</p>
+                <p class="room-description">The kitchen used for cooking and food preparation in a dwelling.</p>
             </label>
         </div>
 
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room3">
               <input type="radio" id="room3" name="room" class="hide-checkbox" value="Bathroom">
-                <%= image_tag "Modern_Rooms/Modern_Bathrooms", class: "room-img" %>
+                <%= image_tag "Modern_Rooms/Modern_Bathrooms.jpg", class: "room-img" %>
                 <h2 class="room-title">Bathroom</h2>
-                <p class="room-description">Room description goes here.</p>
+                <p class="room-description">A bathroom is a room that contains a bath or shower, a washbasin, and toilet.</p>
             </label>
         </div>
 
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room4">
               <input type="radio" id="room4" name="room" class="hide-checkbox" value="Bedroom">
-                <%= image_tag "Modern_Rooms/Modern_BedRoom", class: "room-img" %>
+                <%= image_tag "Modern_Rooms/Modern_BedRoom.jpg", class: "room-img" %>
                 <h2 class="room-title">Bedroom</h2>
-                <p class="room-description">Room description goes here.</p>
+                <p class="room-description">A bedroom is used for sleeping and rest.</p>
             </label>
         </div>
 
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room5">
               <input type="radio" id="room5" name="room" class="hide-checkbox" value="Office">
-                <%= image_tag "Modern_Rooms/Modern_office s", class: "room-img" %>
+                <%= image_tag "Modern_Rooms/Modern_office s.jpg", class: "room-img" %>
                 <h2 class="room-title">Office</h2>
-                <p class="room-description">Room description goes here.</p>
+                <p class="room-description">A office room is used for business and communication.</p>
             </label>
         </div>
 
         <div class="room-card" data-action="click->update-form#submit">
             <label for="room6">
               <input type="radio" id="room6" name="room" class="hide-checkbox" value="Nook">
-                <%= image_tag "Modern_Rooms/Modern_Nook", class: "room-img" %>
+                <%= image_tag "Modern_Rooms/Modern_Nook.webp", class: "room-img" %>
                 <h2 class="room-title">Nook</h2>
-                <p class="room-description">Room description goes here.</p>
+                <p class="room-description">Sheltered and secluded place and a place for privacy, peace and quiet.</p>
             </label>
         </div>
-
-
-
       </div>
     </fieldset>
   </form>
