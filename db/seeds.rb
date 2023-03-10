@@ -146,33 +146,33 @@ modern_preset1 = PresetItem.create({
 })
 
 modern_preset2 = PresetItem.create({
-  preset_id: modern_nightstand.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_nightstand.id
 })
 
 modern_preset3 = PresetItem.create({
-  preset_id: modern_floor.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_floor.id
 })
 
 modern_preset4 = PresetItem.create({
-  preset_id: modern_dresser.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_dresser.id
 })
 
 modern_preset5 = PresetItem.create({
-  preset_id: modern_lamp.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_lamp.id
 })
 
 modern_preset6 = PresetItem.create({
-  preset_id: white_paint.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: white_paint.id
 })
 
 modern_preset7 = PresetItem.create({
-  preset_id: modern_short_dresser.id,
-  item_id: modern_bed.id
+  preset_id: modern_bedroom.id,
+  item_id: modern_short_dresser.id
 })
 
 puts "created preset_items for mdoern bedroom"
@@ -202,6 +202,7 @@ modern_closet.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dx
 puts "created modern closet"
 
 
+
 modern_coffee_table1 = Item.create({
   name: "Wicker Coffee Table",
   price: 40,
@@ -220,10 +221,13 @@ modern_coffee_table2.photo.attach(io: File.open(URI.open('https://res.cloudinary
 puts "created modern coffee table 2"
 
 
+
 modern_wood_floor = Item.create({
   name: "Beige wood XL",
   price: 35,
   description: "50 x 15 x 5"
+  price: 30,
+  description: "20 x 40 x 120"
 })
 modern_wood_floor.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256307/Floor_LivingRoom_bbpxkq.jpg')), filename: 'modern_wood_floor', content_type: 'image/png')
 puts "created modern wood floor"
@@ -241,7 +245,7 @@ puts "created modern lamp"
 modern_sofa = Item.create({
   name: "Corner Sofa G-B",
   price: 1200,
-  description: "20 x 40 x 120"
+  description: "250 x 120 x 120"
 })
 modern_sofa.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256308/Sofa_LivingRoom_icyvvx.jpg')), filename: 'modern_sofa', content_type: 'image/png')
 puts "created modern sofa"
