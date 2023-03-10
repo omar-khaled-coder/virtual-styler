@@ -25,15 +25,7 @@ class PagesController < ApplicationController
     end
   end
 
-
-
-
-
-
-
-
-  def payment
+  def paymentdone
 
   end
-
 end

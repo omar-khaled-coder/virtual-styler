@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   get "/design", to: "pages#design"
   get "/basket", to: "pages#basket"
-
+  get "/paymentdone", to: "pages#paymentdone"
   get "/styles", to: "presets#styles"
 
   get "/presets", to: "presets#presets"
-  get "/payment", to: "pages#payment"
+  #get "/payment", to: "pages#payment"
 end

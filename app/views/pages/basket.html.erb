@@ -1,28 +1,70 @@
+<div class="p-card">
+            <div class="card-top border-bottom text-center">
+                 <a href="javascript:history.back()"> Back to shop</a>
+                <span id="logo">Virtual Styler</span>
+            </div>
+            <div class="card-body">
+                <div class="row upper">
+                 </div>
+                  <div class="row">
+                        <div class="col-md-5">
+                          <div class="right border">
+
+                              <div class="header">Order Summary</div>
+
+                            <div class="row item item1">
+                              <%@cart_items.each do |cart_item|%>
+                                <div class="d-flex item-card align-items-center ms-5 mb-2" data-controller="basket-sum" data-basket-sum-target="sum">
+                                  <%= cl_image_tag cart_item.item.photo.key, :width=>80,:height=>80, :crop=>"fill", class: "item-image p-2"  %>
+                                  <p class="mt-3 me-5 ps-2"><span class="item-name"><%= cart_item.item.name %></span>
+                                  <br>
+                                  <span class="item-description"><%= cart_item.item.description %></span>
+                                  </p>
+                                  <div class="cart-input ms-auto me-5 mb-3 d-flex flex-column">
+                                    <div class="d-flex ">
+                                      <div>x<span data-basket-sum-target="quantity"><%= cart_item.quantity %></span></div>
+                                    </div>
+                                    <p class="item-price">$<span data-basket-sum-target="price"><%=cart_item.item.price%></span></p>
+                                  </div>
+                                </div>
+                              <% end %>
+                        <div class="total">Your total is: $<span id="sum"></span></div>
+                            </div>
+                          </div>
+                        </div>
 
 
-
-
-
-
-
-
-
-
-<div>
-  <%@cart_items.each do |cart_item|%>
-    <div class="d-flex item-card align-items-center ms-5 mb-2" data-controller="basket-sum" data-basket-sum-target="sum">
-      <%= cl_image_tag cart_item.item.photo.key, :width=>80,:height=>80, :crop=>"fill", class: "item-image p-2"  %>
-      <p class="mt-3 me-5 ps-2"><span class="item-name"><%= cart_item.item.name %></span>
-      <br>
-      <span class="item-description"><%= cart_item.item.description %></span>
-      </p>
-      <div class="cart-input ms-auto me-5 mb-3 d-flex flex-column">
-      <div class="d-flex ">
-        <div>x<span data-basket-sum-target="quantity"><%= cart_item.quantity %></span></div>
-      </div>
-      <p class="item-price">$<span data-basket-sum-target="price"><%=cart_item.item.price%></span></p>
-      </div>
-    </div>
-  <% end %>
-
-<div class="total">Your total is: $<span id="sum"></span></div>
+                      <div class="col-md-7">
+                        <div class=" box1">
+                            <div class="row">
+                                <span class="header">Payment</span>
+                                <div class="icons">
+                                    <img src="https://img.icons8.com/color/48/000000/visa.png"/>
+                                    <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
+                                    <img src="https://img.icons8.com/color/48/000000/maestro.png"/>
+                                </div>
+                            </div>
+                            <form>
+                                <span>Cardholder's name:</span>
+                                <input class="pay-fild" placeholder="Linda Williams">
+                                <span>Card Number:</span>
+                                <input class="pay-fild" placeholder="0125 6780 4567 9909">
+                                <div class="row">
+                                    <div class="col-4"><span>Expiry date:</span>
+                                        <input class="pay-fild" placeholder="YY/MM">
+                                    </div>
+                                    <div class="col-4"><span>CVV:</span>
+                                        <input class="pay-fild" id="cvv">
+                                    </div>
+                                </div>
+                                <input class="pay-fild" type="checkbox" id="save_card" class="align-left">
+                                <label for="save_card">Save card details to wallet</label>
+                            </form>
+                              <div class="button-div">
+                                  <%= link_to "Confirm payment", paymentdone_path, class: "button" %>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+</div>
