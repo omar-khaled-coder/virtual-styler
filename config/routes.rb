@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get "/styles", to: "presets#styles"
 
   get "/presets", to: "presets#presets"
-  get "/payment", to: "pages#payment"
+  #get "/payment", to: "pages#payment"
   get "/custom", to: "pages#custom"
 end
