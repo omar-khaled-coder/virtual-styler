@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_06_075945) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_11_090827) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_075945) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "designer_id", null: false
+    t.text "spec_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["designer_id"], name: "index_bookings_on_designer_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
   create_table "cart_items", force: :cascade do |t|
     t.bigint "cart_id", null: false
     t.bigint "item_id", null: false
@@ -57,6 +67,33 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_075945) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
+  create_table "designer_items", force: :cascade do |t|
+    t.bigint "designer_model_id", null: false
+    t.string "name"
+    t.integer "price"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["designer_model_id"], name: "index_designer_items_on_designer_model_id"
+  end
+
+  create_table "designer_models", force: :cascade do |t|
+    t.bigint "booking_id", null: false
+    t.bigint "designer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_designer_models_on_booking_id"
+    t.index ["designer_id"], name: "index_designer_models_on_designer_id"
+  end
+
+  create_table "designers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -99,9 +136,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_075945) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookings", "designers"
+  add_foreign_key "bookings", "users"
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "items"
   add_foreign_key "carts", "users"
+  add_foreign_key "designer_items", "designer_models"
+  add_foreign_key "designer_models", "bookings"
+  add_foreign_key "designer_models", "designers"
   add_foreign_key "preset_items", "items"
   add_foreign_key "preset_items", "presets"
 end
