@@ -95,6 +95,7 @@ fieldset {
 
 .radio-container2 {
   display: flex;
+  margin-bottom: 200px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -173,9 +174,15 @@ fieldset {
 
 
 .greyed-out {
-  color: $primary;
+text-decoration: underline;
+color: #929292;
 }
 
 .greyed-in {
-  color: black;
+  color: $primary;
+}
+
+.greyed-inactive {
+  text-decoration: none;
+  color: #929292;
 }

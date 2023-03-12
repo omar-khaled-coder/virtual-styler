@@ -62,7 +62,15 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height: 93vh;
+  // text-shadow: 0px 0px 35px rgb(34, 34, 34);
+
+  h1 {
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    color: #222222;
+  }
 }
 
 .template-item-description {
