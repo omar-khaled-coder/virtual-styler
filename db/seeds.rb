@@ -184,7 +184,7 @@ modern_preset7 = PresetItem.create({
   item_id: modern_short_dresser.id
 })
 
-puts "created preset_items for mdoern bedroom"
+puts "created preset_items for modern bedroom"
 
 
 
@@ -536,12 +536,12 @@ modern_preset14 = PresetItem.create({
 
 
 
-puts "cerating designers"
+puts "creating designers"
 
 designer1 = Designer.create({
   first_name: "Chris",
   last_name: "Bumstead",
-  bio: "Will bench your mum and dad, but can also design your room"
+  bio: "Meet Chris, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations."
 })
 
 puts "created designer 1"
@@ -557,7 +557,7 @@ puts "attached designer 1 project images"
 designer2 = Designer.create({
   first_name: "Margaret ",
   last_name: "Thatcher",
-  bio: "Banana banum namnam ban banunamus"
+  bio: "Meet Margaret, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result."
 })
 
 puts "created designer 2"
@@ -570,4 +570,14 @@ designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.c
 designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
 puts "attached designer 2 project images"
 
- puts "seeding done"
+puts "
+
+
+#   +-++-++-++-++-++-++-+
+#   |S||e||e||d||i||n||g|
+#   +-++-++-++-++-++-++-+
+#   +-++-++-++-+
+#   |D||o||n||e|
+#   +-++-++-++-+
+
+"
