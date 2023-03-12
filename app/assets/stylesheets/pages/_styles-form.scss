@@ -24,40 +24,40 @@
   width: 300px;
   margin-bottom: 60px;
   position: relative;
+  overflow: hidden;
 }
 
 .style-title {
   margin: 0px;
-  padding: 0px;
+  padding: 10px 10px;
   position: absolute;
   bottom: 0px;
   left: 5px;
-  transition: bottom 0.3s, opacity 0.3s;
+  transition: bottom 0.3s ease-out, opacity 0.3s;
   color: white;
-
-text-shadow: 0px 0px 20px rgba(34,34,34,0.3);
-
+  text-shadow: 0px 0px 35px rgb(34, 34, 34);
 }
 
-.style-description {
+.style-card:hover .style-title {
+  bottom: 120px;
+  opacity: 0;
+}
+
+.style-card .style-description {
   margin: 0px;
+  padding: 10px 10px;
   position: absolute;
-  bottom: 10px;
+  bottom: -150px;
   left: 5px;
   transition: bottom 0.3s, opacity 0.3s;
   color: white;
   opacity: 0;
+  text-shadow: 0px 0px 35px rgb(34, 34, 34);
 }
 
 .style-card:hover .style-description {
-  display: block;
-  bottom: 50px;
+  bottom: 0px;
   opacity: 1;
-}
-
-.style-card:hover .style-title {
-  bottom: 100px;
-  opacity: 0;
 }
 
 .fieldset-1 {
@@ -66,6 +66,11 @@ text-shadow: 0px 0px 20px rgba(34,34,34,0.3);
 
 fieldset {
   padding-bottom: 56px;
+}
+
+.style-card .style-img {
+  filter: brightness(100%);
+  transition: 0.3s;
 }
 
 .style-card:hover .style-img {
@@ -115,27 +120,31 @@ fieldset {
 
 .room-title {
   margin: 0px;
-  padding: 0px;
+  padding: 10px 10px;
   position: absolute;
   bottom: 0px;
   left: 5px;
   transition: bottom 0.3s;
   color: white;
+  text-shadow: 0px 0px 35px rgb(34, 34, 34);
 }
+
 
 .room-description {
   margin: 0px;
+  padding: 0px 10px;
   position: absolute;
   bottom: 10px;
   left: 5px;
-  display: none;
-  transition: bottom 0.3s;
+  transition: bottom 0.3s, opacity 0.3s;
   color: white;
+  opacity: 0;
 }
 
 .room-card:hover .room-description {
   display: block;
   bottom: 50px;
+  opacity: 1;
 }
 
 .room-card:hover .room-title {
@@ -151,8 +160,13 @@ fieldset {
   margin-bottom: 200px;
 }
 
+.room-card .style-img {
+  filter: brightness(100%);
+  transition: 0.3s;
+}
+
 .room-card:hover .room-img {
-  filter: contrast(40%);
+  filter: brightness(40%);
   transition: 0.3s;
 }
 
