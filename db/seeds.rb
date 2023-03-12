@@ -1,6 +1,10 @@
 
 require 'open-uri'
 
+puts "destoying bookings"
+Booking.destroy_all
+puts "bookings destroyed"
+
 puts "destoying carts_items"
 CartItem.destroy_all
 puts "carts_items destroyed"
@@ -24,6 +28,11 @@ puts "presets destroyed"
 puts "destoying items"
 Item.destroy_all
 puts "items destroyed"
+
+
+puts "destoying designers"
+Designer.destroy_all
+puts "designers destroyed"
 
 
 puts "starting to seed"
@@ -225,8 +234,6 @@ puts "created modern coffee table 2"
 modern_wood_floor = Item.create({
   name: "Beige wood XL",
   price: 35,
-  description: "50 x 15 x 5"
-  price: 30,
   description: "20 x 40 x 120"
 })
 modern_wood_floor.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678256307/Floor_LivingRoom_bbpxkq.jpg')), filename: 'modern_wood_floor', content_type: 'image/png')
@@ -523,4 +530,44 @@ modern_preset14 = PresetItem.create({
 # livingroom_floor_gray_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Floor_Gray_2.png', content_type: 'image/png')
 # puts "created wood wall"
 
-# puts "seeding done"
+
+
+
+
+
+
+puts "cerating designers"
+
+designer1 = Designer.create({
+  first_name: "Chris",
+  last_name: "Bumstead",
+  bio: "Will bench your mum and dad, but can also design your room"
+})
+
+puts "created designer 1"
+designer1.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527072/jacked-factory-cbum-phone-line_dmmspe.jpg')), filename: 'designer1', content_type: 'image/png')
+puts "attached designer1 avatar"
+puts "attaching designer1 project photo"
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527296/maxresdefault_olb3qo.jpg')), filename: 'designer1-project1', content_type: 'image/png')
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527303/interior-design-ideas-for-hall-768x512_zuiklv.jpg')), filename: 'designer1-project2', content_type: 'image/png')
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527313/pexels-photo-1571460.jpeg_i2sa2e.jpg')), filename: 'designer1-project3', content_type: 'image/png')
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527330/interior-design-ideas-idea-1-35idmistonroad-anouska-tamony-1644331792_fj22rp.jpg')), filename: 'designer1-project4', content_type: 'image/png')
+puts "attached designer 1 project images"
+
+designer2 = Designer.create({
+  first_name: "Margaret ",
+  last_name: "Thatcher",
+  bio: "Banana banum namnam ban banunamus"
+})
+
+puts "created designer 2"
+designer2.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528160/portrait-attractive-young-woman-who-sitting-cafe-cafe-urban-lifestyle-random-portrait-portrait-attractive-184127657_uzlgxz.jpg')), filename: 'designer2', content_type: 'image/png')
+puts "attached designer2 avatar"
+puts "attaching designer2 project photo"
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528181/Tendenze2020_kpwja7.jpg')), filename: 'designer2-project1', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528192/programs-interior-design-hero-fall-2021_qwiho0.jpg')), filename: 'designer2-project2', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528206/home-interior-ideas_me0o2b.jpg')), filename: 'designer2-project3', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
+puts "attached designer 2 project images"
+
+ puts "seeding done"

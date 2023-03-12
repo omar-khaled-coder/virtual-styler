@@ -1,0 +1,13 @@
+<h1>designer index page</h1>
+
+<% @designers.each do |designer| %>
+  <%= designer.first_name %>
+  <%= designer.last_name %>
+  <%= designer.bio %>
+  <%= cl_image_tag designer.avatar.key, height: 200, width: 200, crop: :fill  %>
+
+  <%designer.project_photos.each do |photo| %>
+   <%=cl_image_tag photo.key, height: 100, width: 100, crop: :fill  %>
+  <% end %>
+  <%= link_to "Show more", custom_path(designer) %>
+<% end %>
