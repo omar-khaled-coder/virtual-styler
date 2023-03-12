@@ -1,11 +1,4 @@
-.p-card{
-  // max-width: 1250px;
-  margin: 2vh;
-   min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: $light-gray;
-}
+
 .card-top{
   padding: 0.7rem 5rem;
 }
@@ -13,39 +6,17 @@
   float: left;
   margin-top: 0.7rem;
 }
-#logo{
-  font-family: 'Dancing Script';
-  font-weight: bold;
-  font-size: 1.6rem;
-}
-.card-body{
-  padding: 0 5rem 5rem 5rem;
-  // background-image: url("http://wallpapers.net/free-black-and-white-architecture-wallpaper/download/2560x1440.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 12px;
-  height: auto;
-  min-height: 550px;
-}
-@media(max-width:768px){
-  .card-body{
-      padding: 0 1rem 1rem 1rem;
-      background-image: url("https://static.videezy.com/system/resources/thumbnails/000/041/687/original/02.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-  }
-  .card-top{
-      padding: 0.7rem 1rem;
-  }
-}
+
 .row{
   margin: 0;
 }
+
 .upper{
   padding: 1rem 0;
   justify-content: space-evenly;
   flex-direction: row;}
-#three{
+
+  #three{
   border-radius: 1rem;
       width: 22px;
   height: 22px;
@@ -54,115 +25,69 @@
   text-align: center;
   display: inline-block;
 }
-#payment{
-  margin:0;
-  color: blue;
-}
+
 .icons{
   margin-left: auto;
 }
-form span{
-  color: rgb(179, 179, 179);
-}
-form{
-  padding: 0 0;
-}
-.pay-fild{
+
+.pay-fild {
   border: 1px solid rgba(0, 0, 0, 0.137);
+  border-radius: 10px;
   padding: 1vh;
   margin-bottom: 4vh;
-  outline: none;
   width: 100%;
-  background-color: rgb(247, 247, 247);
+  background-color: #f7f7f7;
 }
-input:focus::-webkit-input-placeholder
-{
-    color:transparent;
+
+.payment-left-side {
+  padding-left: 0;
 }
-.header{
-  font-size: 1.5rem;
-}
-.left{
-  background-color: #ffffff;
-  padding: 2vh;
-}
+
 .left img{
   width: 2rem;
 }
+
 .left .col-4{
   padding-left: 0;
 }
+
 .right .item{
   padding: 0.3rem 0;
 }
-.right{
+
+.payment-right{
   background-color: #ffffff;
   padding: 2vh;
   border-radius: 12px;
   background: #FFFFFF;
-  box-shadow: 0px 0px 58px rgba(0, 0, 0, 0.25);
-  width: 463px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
   padding-right: 6px;
-padding-left: 0px;
-
-}
-.col-8{
-  padding: 0 1vh;
-}
-.lower{
-  line-height: 2;
+  padding-left: 0px;
 }
 
-.btn:focus{
-  box-shadow: none;
-  outline: none;
-  box-shadow: none;
-  color: white;
-  -webkit-box-shadow: none;
-  -webkit-user-select: none;
-  transition: none;
-}
-.btn:hover{
-  color: white;
-}
+
 a{
-  color: black;
-}
-a:hover{
-  color: black;
   text-decoration: none;
 }
+
 input[type=checkbox]{
   width: unset;
   margin-bottom: unset;
 }
-#cvv{
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.575) , rgba(255, 255, 255, 0.541)), url("https://img.icons8.com/material-outlined/24/000000/help.png");
-  background-repeat: no-repeat;
-  background-position-x: 95%;
-  background-position-y: center;
-}
-#cvv:hover{
 
-}
-.box1{
+.box1 {
   display: flex;
-flex-direction: column;
-align-items: center;
-padding: 24px;
-gap: 32px;
-
-position: absolute;
-width: 540px;
-height: max-content;
-/* White */
-background: #FFFFFF;
-box-shadow: 0px 0px 58px rgba(0, 0, 0, 0.25);
-border-radius: 12px;
-margin-left: 80px;
+  flex-direction: column;
+  padding: 24px;
+  gap: 32px;
+  position: absolute;
+  height: 65.5vh;
+  background: #FFFFFF;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
 }
 
-.right-noshadow{
+.right-noshadow {
   background-color: #ffffff;
   padding: 2vh;
   border-radius: 12px;
@@ -170,4 +95,29 @@ margin-left: 80px;
   // box-shadow: 0px 0px 58px rgba(0, 0, 0, 0.25);
   width: 463px;
   height: max-content;
+}
+ .payment-right h3 {
+  margin-left: 14px;
+ }
+
+.payment-total {
+  padding-right: 27px;
+  padding-top: 10px;
+  text-align: end;
+}
+
+.expiry-date {
+  padding-left: 0;
+}
+
+.preset-items-basket {
+  height: 53vh;
+  overflow-y: scroll;
+}
+
+.button-div-basket {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
 }
