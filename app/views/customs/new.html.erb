@@ -1,0 +1,13 @@
+
+
+<h1>create booking form</h1>
+
+
+
+
+
+<%= simple_form_for [@designer, @booking],url: customs_path do |f| %>
+  <%= f.input :spec_file, as: :file %>
+  <%= f.input :spec_text %>
+  <%= f.submit %>
+<% end %>
