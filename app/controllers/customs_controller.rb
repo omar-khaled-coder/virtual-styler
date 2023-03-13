@@ -15,14 +15,13 @@ class CustomsController < ApplicationController
   def new
     @designer = Designer.find(params[:format])
     @booking = Booking.new
-    raise
   end
 
  #save booking
   def create
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
-    @booking.designer_id = @designer.id
+    @booking.designer_id = params[:designer]
     @booking.save
     redirect_to customs_dashboard_path
   end
@@ -33,6 +32,6 @@ class CustomsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:spec_text, :spec_file)
+    params.require(:booking).permit(:spec_text, :spec_file, :designer)
   end
 end
