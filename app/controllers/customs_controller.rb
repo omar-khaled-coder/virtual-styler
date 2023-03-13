@@ -22,12 +22,13 @@ class CustomsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     @booking.designer_id = params[:designer]
+    @booking.status = "pending"
     @booking.save
-    redirect_to customs_dashboard_path
+    redirect_to user_dashboard_path
   end
 
-  def dashboard
-    @bookings = Booking.find(current_user.id)
+  def user_dashboard
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   private

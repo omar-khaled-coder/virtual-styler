@@ -1,0 +1,21 @@
+<h1>Bookings</h1>
+<% if @bookings.empty? %>
+  <h1>You don't have any bookings yet!</h1>
+<% else %>
+  <div class="booking-item">
+    <p class="p-class">Booked by</p>
+    <p class="p-class">Booked on</p>
+    <p class="p-class">Designeing by</p>
+    <p class="p-class">Status</p>
+    <p class="p-class"> start chat</p>
+  </div>
+  <% @bookings.each do |booking| %>
+    <div class="booking-item">
+      <p class="p-class"><%= booking.user.first_name + " " + booking.user.last_name%></p>
+      <p class="p-class"><%= booking.created_at.strftime("%B %d, %Y")  %></p>
+      <p class="p-class dashboard-avatar"><%= cl_image_tag booking.designer.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <%= booking.designer.first_name %>  </p>
+      <p class="p-class"><%= booking.status %></p>
+      <p class="p-class"><%= link_to "chat", "#", class: "butten-red-log-in" %>
+    </div>
+  <% end %>
+<% end %>
