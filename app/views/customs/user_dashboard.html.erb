@@ -1,3 +1,4 @@
+
 <div class="container">
     <h1>Bookings</h1>
     <% if @bookings.empty? %>
@@ -24,12 +25,15 @@
           <div class="p-class content-place"><%= booking.status %></div>
 
           <div class="p-class content-place">
-                <a href="#"><i class="fa-regular fa-comment-dots dashboard-icons"></i></a>
-                <a href="#"><i class="fa-solid fa-list-check dashboard-icons"></i></a>
-                <a href="#"><i class="fa-brands fa-uncharted dashboard-icons"></i></a>
+<% if Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id) %>
+        <p class="p-class"><%= link_to "chat", chatroom_path(booking), class: "butten-red-log-in" %>
+      <% else %>
+        <p class="p-class"><%= link_to "chat", booking_chatrooms_path(booking), data: { turbo_method: :post }, class: "butten-red-log-in" %>
+      <% end %>
           </div>
 
         </div>
       <% end %>
     <% end %>
 </div>
+

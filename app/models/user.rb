@@ -16,6 +16,8 @@ class User < ApplicationRecord
 
   has_one :designer
 
+  has_many :chatrooms
+  has_many :messages
 end
 
 # Path: app/controllers/application_controller.rb
