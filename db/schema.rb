@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_11_090827) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_13_061602) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -69,6 +69,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_11_090827) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id", null: false
+    t.bigint "designer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["designer_id"], name: "index_chatrooms_on_designer_id"
+    t.index ["user_id"], name: "index_chatrooms_on_user_id"
+  end
+
   create_table "designer_items", force: :cascade do |t|
     t.bigint "designer_model_id", null: false
     t.string "name"
@@ -102,6 +112,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_11_090827) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "preset_items", force: :cascade do |t|
@@ -141,10 +161,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_11_090827) do
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "items"
   add_foreign_key "carts", "users"
+  add_foreign_key "chatrooms", "designers"
+  add_foreign_key "chatrooms", "users"
   add_foreign_key "designer_items", "designer_models"
   add_foreign_key "designer_models", "bookings"
   add_foreign_key "designer_models", "designers"
   add_foreign_key "designers", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "preset_items", "items"
   add_foreign_key "preset_items", "presets"
 end

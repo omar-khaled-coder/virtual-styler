@@ -14,4 +14,10 @@ Rails.application.routes.draw do
   resources :customs, only: [:index, :show, :new, :create]
   get "customs/dashboard", to: "customs#dashboard"
 
+
+
+  resources :chatrooms, only: [:new, :create, :show] do
+    resources :messages, only: :create
+  end
+
 end
