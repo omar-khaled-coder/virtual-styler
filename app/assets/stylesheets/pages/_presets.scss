@@ -15,7 +15,7 @@
 }
 
 .preset-items {
-  height: 59vh;
+  height: 54.5vh;
   overflow-y: scroll;
 }
 
@@ -47,9 +47,9 @@
 .minus, .plus{
   width:20px;
   height:20px;
-  background:#f2f2f2;
+  background:#ffffff;
   border-radius:4px;
-  border:1px solid #ddd;
+  border:1px solid #eeebeb;
   font-size: 0.7rem;
 }
 
@@ -90,4 +90,23 @@ color: $gray;
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
+}
+
+.price_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  flex-grow: 1;
+  padding: 0px 16px;
+}
+
+.card_prire_bottun {
+  background-color: $white;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 1px #ebebeb;
 }

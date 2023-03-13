@@ -11,12 +11,6 @@ Rails.application.routes.draw do
   get "/styles", to: "presets#styles"
   get "/presets", to: "presets#presets"
 
-
-
-
-
-
-
   resources :customs, only: [:index, :show, :new, :create]
   get "customs/dashboard", to: "customs#dashboard"
 

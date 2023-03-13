@@ -1,6 +1,11 @@
 
 require 'open-uri'
 
+
+puts "destoying designers"
+Designer.destroy_all
+puts "designers destroyed"
+
 puts "destoying bookings"
 Booking.destroy_all
 puts "bookings destroyed"
@@ -30,15 +35,12 @@ Item.destroy_all
 puts "items destroyed"
 
 
-puts "destoying designers"
-Designer.destroy_all
-puts "designers destroyed"
 
 
 puts "starting to seed"
 puts "creating demo user"
 
-dave = User.create!({
+john = User.create!({
   first_name: "John",
   last_name: "Doe",
   email: "john@gmail.com",
@@ -46,95 +48,45 @@ dave = User.create!({
 })
 puts "created user John Doe, email: john@gmail.com password: 123456"
 puts "attaching John's avatar"
-dave.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
+john.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
 puts "attached John's avatar"
 
-
-
-
-
-
-
-
-puts "creating preset"
-modern_bedroom = Preset.create({
-  style: "Modern",
-  room: "Bedroom"
+dave = User.create!({
+  first_name: "Dave",
+  last_name: "Smith",
+  email: "dave@gmail.com",
+  password: "123456"
 })
-puts "modern bedroom preset created"
-puts "attaching modern bedroom photo"
-modern_bedroom.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678249532/BedRoom_main_sa7etc.jpg')), filename: 'modern_bedroom.png', content_type: 'image/png')
-puts "modern bedroom photo attached"
+puts "created user Dave smith, email: dave@gmail.com password: 123456"
+puts "attaching Dave's avatar"
+dave.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
+puts "attached Dave's avatar"
 
-
-
-
-
-
-
-
-
-
-
-
-puts "creating items for the modern bedroom"
-modern_bed = Item.create({
-  name: "Modern Bed",
-  price: 300,
-  description: "20 x 40 x 120"
+alice = User.create!({
+  first_name: "Alice",
+  last_name: "Kowalski",
+  email: "alice@gmail.com",
+  password: "123456"
 })
-modern_bed.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Bed_BedRoom_lqyftq.jpg')), filename: 'modern_bed.png', content_type: 'image/png')
-puts "created modern bed"
+puts "created user alice kowalsi, email: alice@gmail.com password: 123456"
+puts "attaching alice's avatar"
+alice.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
+puts "attached alice's avatar"
 
-modern_nightstand = Item.create({
-  name: "Modern nightstand",
-  price: 220,
-  description: "20 x 40 x 120"
-})
-modern_nightstand.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Nightstand_BedRoom_mtme3k.jpg')), filename: 'modern_nightstand.png', content_type: 'image/png')
-puts "created modern nightstand"
 
-modern_floor = Item.create({
-  name: "Modern floor",
-  price: 30,
-  description: "20 x 40 x 120"
-})
-modern_floor.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250022/Floor_BedRoom_kuwvrx.jpg')), filename: 'modern_floor.png', content_type: 'image/png')
-puts "created modern floor"
 
-modern_dresser = Item.create({
-  name: "Modern dresser",
-  price: 450,
-  description: "20 x 40 x 120"
-})
-modern_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Tall_Dresser__BedRoom_y7yviq.jpg')), filename: 'modern_dresser.png', content_type: 'image/png')
-puts "created modern dresser"
 
-modern_lamp = Item.create({
-  name: "Modern lamp",
-  price: 50,
-  description: "20 x 40 x 120"
-})
-modern_lamp.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250021/Lamp-stone_BedRoom_s_ly2ltw.jpg')), filename: 'modern_lamp.png', content_type: 'image/png')
-puts "created modern lamp"
 
-white_paint = Item.create({
-  name: "White paint",
-  price: 50,
-  description: "20 x 40 x 120"
-})
-white_paint.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/White_Paint_BedRoom_pdjz9i.jpg')), filename: 'white_paint.png', content_type: 'image/png')
-puts "created white paint"
 
-modern_short_dresser = Item.create({
-  name: "Short modern dresser",
-  price: 380,
-  description: "20 x 40 x 120"
-})
-modern_short_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Dresser_BedRoom_iif32a.jpg')), filename: 'modern_short_dresser', content_type: 'image/png')
-puts "created modern short dresser"
-
-puts "created all modern bedroom items with images attahced"
+# puts "creating preset"
+# modern_bedroom = Preset.create({
+#   style: "Modern",
+#   room: "Bedroom"
+# })
+# puts "modern bedroom preset created"
+# puts "attaching modern bedroom photo"
+# modern_bedroom.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678249532/BedRoom_main_sa7etc.jpg')), filename: 'modern_bedroom.png', content_type: 'image/png')
+# puts "modern bedroom photo attached"
 
 
 
@@ -147,44 +99,114 @@ puts "created all modern bedroom items with images attahced"
 
 
 
+# puts "creating items for the modern bedroom"
+# modern_bed = Item.create({
+#   name: "Modern Bed",
+#   price: 300,
+#   description: "20 x 40 x 120"
+# })
+# modern_bed.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Bed_BedRoom_lqyftq.jpg')), filename: 'modern_bed.png', content_type: 'image/png')
+# puts "created modern bed"
 
-puts "creating preset_item objects"
-modern_preset1 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_bed.id
-})
+# modern_nightstand = Item.create({
+#   name: "Modern nightstand",
+#   price: 220,
+#   description: "20 x 40 x 120"
+# })
+# modern_nightstand.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Nightstand_BedRoom_mtme3k.jpg')), filename: 'modern_nightstand.png', content_type: 'image/png')
+# puts "created modern nightstand"
 
-modern_preset2 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_nightstand.id
-})
+# modern_floor = Item.create({
+#   name: "Modern floor",
+#   price: 30,
+#   description: "20 x 40 x 120"
+# })
+# modern_floor.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250022/Floor_BedRoom_kuwvrx.jpg')), filename: 'modern_floor.png', content_type: 'image/png')
+# puts "created modern floor"
 
-modern_preset3 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_floor.id
-})
+# modern_dresser = Item.create({
+#   name: "Modern dresser",
+#   price: 450,
+#   description: "20 x 40 x 120"
+# })
+# modern_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Tall_Dresser__BedRoom_y7yviq.jpg')), filename: 'modern_dresser.png', content_type: 'image/png')
+# puts "created modern dresser"
 
-modern_preset4 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_dresser.id
-})
+# modern_lamp = Item.create({
+#   name: "Modern lamp",
+#   price: 50,
+#   description: "20 x 40 x 120"
+# })
+# modern_lamp.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250021/Lamp-stone_BedRoom_s_ly2ltw.jpg')), filename: 'modern_lamp.png', content_type: 'image/png')
+# puts "created modern lamp"
 
-modern_preset5 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_lamp.id
-})
+# white_paint = Item.create({
+#   name: "White paint",
+#   price: 50,
+#   description: "20 x 40 x 120"
+# })
+# white_paint.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/White_Paint_BedRoom_pdjz9i.jpg')), filename: 'white_paint.png', content_type: 'image/png')
+# puts "created white paint"
 
-modern_preset6 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: white_paint.id
-})
+# modern_short_dresser = Item.create({
+#   name: "Short modern dresser",
+#   price: 380,
+#   description: "20 x 40 x 120"
+# })
+# modern_short_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Dresser_BedRoom_iif32a.jpg')), filename: 'modern_short_dresser', content_type: 'image/png')
+# puts "created modern short dresser"
 
-modern_preset7 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_short_dresser.id
-})
+# puts "created all modern bedroom items with images attahced"
 
-puts "created preset_items for modern bedroom"
+
+
+
+
+
+
+
+
+
+
+
+
+# puts "creating preset_item objects"
+# modern_preset1 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_bed.id
+# })
+
+# modern_preset2 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_nightstand.id
+# })
+
+# modern_preset3 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_floor.id
+# })
+
+# modern_preset4 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_dresser.id
+# })
+
+# modern_preset5 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_lamp.id
+# })
+
+# modern_preset6 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: white_paint.id
+# })
+
+# modern_preset7 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_short_dresser.id
+# })
+
+# puts "created preset_items for modern bedroom"
 
 
 
@@ -327,117 +349,169 @@ modern_preset14 = PresetItem.create({
   item_id: modern_curtains.id
 })
 
-puts "creating preset_item objects"
-modern_preset14 = PresetItem.create({
-  preset_id: modern_living_room.id,
-  item_id: white_paint.id
+# puts "creating preset_item objects"
+# modern_preset14 = PresetItem.create({
+#   preset_id: modern_living_room.id,
+#   item_id: white_paint.id
+# })
+
+
+#---------------------------
+
+#Modern_LivingRoom_Part_2
+
+puts "creating preset modern living room 2"
+modern_living_room2 = Preset.create({
+  style: "Modern",
+  room: "Living room part 2"
+})
+puts "modern living room 2 preset created"
+puts "attaching modern living room 2 photo"
+modern_living_room2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675507/slack-imgs.com_uoxlly.png')), filename: 'LivingRoom_Main_2.png', content_type: 'image/png')
+puts "modern living room 2 photo attached"
+
+
+
+
+puts "creating items for the modern living room"
+livingroom_chair_black_2 = Item.create({
+  name: "Chair Black AU",
+  price: 50,
+  description: "50 x 50 x 100"
+})
+livingroom_chair_black_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675720/LivingRoom_Chair_Black_2_cpgkww.jpg')), filename: 'LivingRoom_Chair_Black_2.png', content_type: 'image/png')
+puts "created Chair Black"
+
+
+livingroom_coffee_table_2 = Item.create({
+  name: "Coffee Table Wood-1",
+  price: 40,
+  description: "40 x 40 x 60"
+})
+livingroom_coffee_table_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675723/LivingRoom_Coffee_Table_2_gddzmy.jpg')), filename: 'LivingRoom_Coffee_Table_2.png', content_type: 'image/png')
+puts "created LivingRoom_Coffee_Table_2"
+
+
+livingroom_lamp_2 = Item.create({
+  name: "High Lamp Black",
+  price: 60,
+  description: "20 x 20 x 120"
+})
+livingroom_lamp_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675723/LivingRoom_Coffee_Table_2_gddzmy.jpg')), filename: 'livingroom_lamp_2.png', content_type: 'image/png')
+
+puts "created modern lamp 2"
+
+
+livingroom_lamp_muliple_2 = Item.create({
+  name: "Muliple Lamp T-6",
+  price: 200,
+  description: "50 x 50 x 100"
+})
+livingroom_lamp_muliple_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675720/LivingRoom_Chair_Black_2_cpgkww.jpg')), filename: 'LivingRoom_Lamp_Muliple_2.png', content_type: 'image/png')
+puts "created modern lamp muliple 2"
+
+
+livingroom_pillow_2 = Item.create({
+  name: "Pillow White",
+  price: 20,
+  description: "20 x 20 x 10"
+})
+livingroom_pillow_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675721/LivingRoom_Pillow_2_jemzvm.jpg')), filename: 'LivingRoom_Pillow_2.png', content_type: 'image/png')
+puts "created livingroom pillow 2"
+
+
+livingroom_sofa_2 = Item.create({
+  name: "Corner Sofa Beige",
+  price: 1200,
+  description: "200 x 100 x 120"
+})
+livingroom_sofa_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675507/slack-imgs.com_uoxlly.png')), filename: 'LivingRoom_Sofa_2.png', content_type: 'image/png')
+puts "created modern sofa"
+
+
+livingroom_carpet_gray_2 = Item.create({
+  name: "Carpet Gray LV",
+  price: 400,
+  description: "200 x 200 x 5"
+})
+livingroom_carpet_gray_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675723/LivingRoom_Coffee_Table_2_gddzmy.jpg')), filename: 'LivingRoom_Floor_Gray_2.png', content_type: 'image/png')
+puts "created carpet gray"
+
+livingroom_beige_curtain_2 = Item.create({
+  name: "Curtain Beige 54",
+  price: 600,
+  description: "400 x 5 x 250"
+})
+livingroom_beige_curtain_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675720/LivingRoom_Beige_Curtain_2_mhcpkw.jpg')), filename: 'LivingRoom_Beige_Curtain_2.png', content_type: 'image/png')
+puts "created beige curtain"
+
+livingroom_floor_gray_2 = Item.create({
+  name: "floor Gray XL",
+  price: 20,
+  description: "50 x 20 x 5"
+})
+livingroom_floor_gray_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675720/LivingRoom_Floor_gray_2_img0rg.jpg')), filename: 'LivingRoom_Floor_Gray_2.png', content_type: 'image/png')
+puts "created floor gray"
+
+
+
+
+
+
+
+
+
+modern_preset15 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_chair_black_2.id
+})
+
+
+modern_preset16 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_coffee_table_2.id
+})
+
+modern_preset17 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_lamp_2 .id
+})
+
+modern_preset18 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_lamp_muliple_2.id
+})
+
+modern_preset19 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_pillow_2.id
+})
+
+modern_preset20 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_sofa_2.id
+})
+
+modern_preset21 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_carpet_gray_2.id
+})
+
+modern_preset22 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_beige_curtain_2.id
+})
+
+modern_preset23 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_floor_gray_2.id
 })
 
 
 
 
-# Modern_LivingRoom_Part_2
 
-# puts "creating preset modern living room 2"
-# modern_living_room = Preset.create({
-#   style: "Modern",
-#   room: "Living room part 2"
-# })
-# puts "modern living room 2 preset created"
-# puts "attaching modern living room 2 photo"
-# livingroom_main_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Main_2.png', content_type: 'image/png')
-# puts "modern living room 2 photo attached"
-
-
-# puts "creating items for the modern living room"
-# livingroom_chair_black_2 = Item.create({
-#   name: "Chair Black AU",
-#   price: 50,
-#   description: "50 x 50 x 100"
-# })
-# livingroom_chair_black_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Chair_Black_2.png', content_type: 'image/png')
-# puts "created Chair Black"
-
-
-# livingroom_coffee_table_2 = Item.create({
-#   name: "Coffee Table Wood-1",
-#   price: 40,
-#   description: "40 x 40 x 60"
-# })
-# livingroom_coffee_table_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Coffee_Table_2.png', content_type: 'image/png')
-# puts "created LivingRoom_Coffee_Table_2"
-
-
-# livingroom_lamp_2 = Item.create({
-#   name: "High Lamp Black",
-#   price: 60,
-#   description: "20 x 20 x 120"
-# })
-# livingroom_lamp_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Coffee_Table_2.png', content_type: 'image/png')
-# puts "created modern lamp 2"
-
-
-# livingroom_lamp_muliple_2 = Item.create({
-#   name: "Muliple Lamp T-6",
-#   price: 200,
-#   description: "50 x 50 x 100"
-# })
-# livingroom_lamp_muliple_2.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Lamp_Muliple_2.png', content_type: 'image/png')
-# puts "created modern lamp muliple 2"
-
-
-# livingroom_pillow_2 = Item.create({
-#   name: "Pillow White",
-#   price: 20,
-#   description: "20 x 20 x 10"
-# })
-# livingroom_pillow_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Pillow_2.png', content_type: 'image/png')
-# puts "created livingroom pillow 2"
-
-
-# livingroom_sofa_2 = Item.create({
-#   name: "Corner Sofa Beige",
-#   price: 1200,
-#   description: "200 x 100 x 120"
-# })
-# livingroom_sofa_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Sofa_2.png', content_type: 'image/png')
-# puts "created modern sofa"
-
-
-# livingroom_carpet_gray_2 = Item.create({
-#   name: "Carpet Gray LV",
-#   price: 400,
-#   description: "200 x 200 x 5"
-# })
-# livingroom_carpet_gray_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Floor_Gray_2.png', content_type: 'image/png')
-# puts "created carpet gray"
-
-# livingroom_beige_curtain_2 = Item.create({
-#   name: "Curtain Beige 54",
-#   price: 600,
-#   description: "400 x 5 x 250"
-# })
-# livingroom_beige_curtain_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Beige_Curtain_2.png', content_type: 'image/png')
-# puts "created beige curtain"
-
-# livingroom_floor_gray_2 = Item.create({
-#   name: "floor Gray XL",
-#   price: 20,
-#   description: "50 x 20 x 5"
-# })
-# livingroom_floor_gray_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Floor_Gray_2.png', content_type: 'image/png')
-# puts "created floor gray"
-
-# livingroom_white_paint_2 = Item.create({
-#   name: "Carpet Gray LV",
-#   price: 400,
-#   description: "200 x 200 x 5"
-# })
-# livingroom_white_paint_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_White_Paint_2.png', content_type: 'image/png')
-# puts "created white paint"
-
-
-
+#---------------------------
 # # BedRoom part 2
 
 # puts "creating preset modern bedroom 2"
@@ -538,14 +612,12 @@ modern_preset14 = PresetItem.create({
 
 puts "creating designers"
 
-designer1 = Designer.create({
-  first_name: "Chris",
-  last_name: "Bumstead",
-  bio: "Meet Chris, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations."
+designer1 = Designer.create!({
+  bio: "Meet Dave, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations.",
+  user: dave
 })
 
 puts "created designer 1"
-designer1.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527072/jacked-factory-cbum-phone-line_dmmspe.jpg')), filename: 'designer1', content_type: 'image/png')
 puts "attached designer1 avatar"
 puts "attaching designer1 project photo"
 designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527296/maxresdefault_olb3qo.jpg')), filename: 'designer1-project1', content_type: 'image/png')
@@ -554,14 +626,12 @@ designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.c
 designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527330/interior-design-ideas-idea-1-35idmistonroad-anouska-tamony-1644331792_fj22rp.jpg')), filename: 'designer1-project4', content_type: 'image/png')
 puts "attached designer 1 project images"
 
-designer2 = Designer.create({
-  first_name: "Margaret ",
-  last_name: "Thatcher",
-  bio: "Meet Margaret, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result."
+designer2 = Designer.create!({
+  bio: "Meet Alice, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result.",
+  user: alice
 })
 
 puts "created designer 2"
-designer2.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528160/portrait-attractive-young-woman-who-sitting-cafe-cafe-urban-lifestyle-random-portrait-portrait-attractive-184127657_uzlgxz.jpg')), filename: 'designer2', content_type: 'image/png')
 puts "attached designer2 avatar"
 puts "attaching designer2 project photo"
 designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528181/Tendenze2020_kpwja7.jpg')), filename: 'designer2-project1', content_type: 'image/png')
