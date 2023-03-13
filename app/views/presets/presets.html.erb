@@ -28,6 +28,7 @@
                 method="GET"
                 data-controller="count-item">
 
+
             <div>
               <div data-controller="total-price">
                 <div class="preset-items pe-2">
@@ -47,14 +48,17 @@
                         </div>
                         <p class="item-price">$ <span data-total-price-target="unitprice" class="item-price"><%= item.price %></span></p>
                       </div>
+
                     </div>
                   <% end %>
                 </div>
 
-                <div class="total-template-price">
-                  <div class="total">Your total is : $ <span data-total-price-target="total" class="total-price">0</span></div>
-                  <input type="submit" value="Submit" class="button" style="border:none">
-                </div>
+
+              <div class="total-template-price card_prire_bottun">
+                <div class="total", style="padding-left: 10px;" >Your total is : $ <span data-total-price-target="total" class="total-price">0</span></div>
+                <input type="submit" value="Submit" class="button" style="border:none">
+              </div>
+
 
               </div>
             </div>
