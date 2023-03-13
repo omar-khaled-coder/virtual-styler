@@ -1,0 +1,85 @@
+.designers-show {
+  background-color: $gray;
+  border-radius: 15px;
+  height: 88vh;
+  padding: 20px;
+}
+
+.designer-avatar-name-show-container {
+  display: flex;
+}
+
+
+.designers-show-avatar {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.designers-show-name {
+  color: #F8F8F8;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.designers-show-bio {
+  color: $light-gray;
+  width: 100%;
+  padding-top: 20px;
+
+  p {
+    overflow:hidden;
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+  }
+}
+
+.designers-show-projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.designers-show-projects {
+  overflow: hidden;
+  height: 26vh;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.designers-show .designers-show-sumbit-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease-out, opacity 0.3s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+}
+
+.designers-show-btn-container {
+  float: left;
+}
+
+.designers-show {
+  filter: brightness(100%);
+  transition: 0.3s;
+  position: relative;
+  margin-bottom: 20px;
+}

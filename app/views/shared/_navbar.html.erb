@@ -28,7 +28,7 @@
               <% if current_user.avatar.key.nil?%>
                 <%= image_tag "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80", height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <% else %>
-                <%= cl_image_tag current_user.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
+                <%= cl_image_tag current_user.avatar.key, height: 410, width: 500, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
               <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", "#", class: "dropdown-item" %>
