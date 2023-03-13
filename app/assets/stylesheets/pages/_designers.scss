@@ -66,24 +66,55 @@
 }
 
 .designers-card .designers-card-sumbit-button {
-  position: relative;
-  float: left;
-  bottom: 0px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   transition: bottom 0.3s ease-out, opacity 0.3s;
   opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
 }
 
-.designers-card:hover .designers-card-sumbit-button {
-  bottom: 120px;
-  opacity: 1;
+.designers-card-btn-container {
+  float: left;
 }
 
 .designers-card {
   filter: brightness(100%);
   transition: 0.3s;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .designers-card:hover {
-  filter: brightness(40%);
   transition: 0.3s;
+
+  .designers-card-sumbit-button {
+    opacity: 1;
+    bottom: 200px;
+    cursor: pointer;
+
+    a, p {
+      color: $white;
+      opacity: 1;
+    }
+  }
+
+  .designer-avatar-name-container {
+    filter: brightness(40%);
+    transition: 0.3s;
+  }
+
+  .designers-card-projects {
+    filter: brightness(40%);
+    transition: 0.3s;
+  }
+
+  .designers-page-bio {
+    filter: brightness(40%);
+    transition: 0.3s;
+  }
 }
