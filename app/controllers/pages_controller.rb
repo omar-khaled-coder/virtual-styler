@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
   # contains items added by the user
   def basket
-    if current_user.cart == nil?
+    if current_user.cart === nil
       @cart = Cart.create(user_id: current_user.id)
     else
       @cart = current_user.cart
