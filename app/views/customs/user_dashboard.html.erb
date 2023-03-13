@@ -13,7 +13,7 @@
     <div class="booking-item">
       <p class="p-class"><%= booking.user.first_name + " " + booking.user.last_name%></p>
       <p class="p-class"><%= booking.created_at.strftime("%B %d, %Y")  %></p>
-      <p class="p-class dashboard-avatar"><%= cl_image_tag booking.designer.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <%= booking.designer.first_name %>  </p>
+      <p class="p-class dashboard-avatar"><%= cl_image_tag booking.designer.user.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <%= booking.designer.user.first_name %>  </p>
       <p class="p-class"><%= booking.status %></p>
       <p class="p-class"><%= link_to "chat", "#", class: "butten-red-log-in" %>
     </div>
