@@ -1,0 +1,22 @@
+.booking-item {
+  display: flex;
+  margin-top: 12px;
+  border-bottom: 1px solid black;
+}
+
+
+.booking-item > p {
+  margin: 0px 15px;
+}
+.p-class{
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  width: 25%;
+}
+
+.dashboard-avatar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

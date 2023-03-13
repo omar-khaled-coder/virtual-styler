@@ -11,7 +11,11 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
   has_one :cart
+
+  has_many :bookings
+
   has_one :designer
+
 end
 
 # Path: app/controllers/application_controller.rb
