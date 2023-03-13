@@ -90,11 +90,11 @@
 }
 
 .designers-card:hover {
-  transition: 0.3s;
+  transition: 0.4s, ease-in;
 
   .designers-card-sumbit-button {
     opacity: 1;
-    bottom: 200px;
+    bottom: 128px;
     cursor: pointer;
 
     a, p {
@@ -104,17 +104,17 @@
   }
 
   .designer-avatar-name-container {
-    filter: brightness(40%);
-    transition: 0.3s;
+    // filter: brightness(40%);
+    transition: 0.4s;
   }
 
   .designers-card-projects {
     filter: brightness(40%);
-    transition: 0.3s;
+    transition: 0.4s;
   }
 
   .designers-page-bio {
-    filter: brightness(40%);
-    transition: 0.3s;
+    // filter: brightness(40%);
+    transition: 0.4s;
   }
 }
