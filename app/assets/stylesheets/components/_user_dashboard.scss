@@ -10,14 +10,32 @@
 }
 .p-class{
   display: flex;
-  margin-top: 50px;
   flex-direction: column;
   width: 25%;
+  margin-left: 10px;
+
 }
 
 .dashboard-avatar{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  margin-right: 5px;
+}
+
+.designer-name-dashboard {
+  margin-left: 10px;
+}
+
+.dashboard-icons{
+  margin-left: 10px;
+}
+
+.content-place{
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 5px;
+
 }
