@@ -1,0 +1,120 @@
+.designers-card {
+  background-color: $gray;
+  border-radius: 15px;
+  padding: 0 20px;
+  padding-bottom: 20px;
+
+}
+
+.designer-avatar-name-container {
+  display: flex;
+  padding-top: 20px;
+}
+
+
+.designers-card-avatar {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.designers-card-name {
+  color: #F8F8F8;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.designers-page-bio {
+  color: $light-gray;
+  width: 100%;
+  padding-top: 20px;
+
+  p {
+    overflow:hidden;
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+  }
+}
+
+.designers-card-projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.designers-card-projects {
+  overflow: hidden;
+  height: 120px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.designers-card .designers-card-sumbit-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease-out, opacity 0.3s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+}
+
+.designers-card-btn-container {
+  float: left;
+}
+
+.designers-card {
+  filter: brightness(100%);
+  transition: 0.3s;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.designers-card:hover {
+  transition: 0.4s, ease-in;
+
+  .designers-card-sumbit-button {
+    opacity: 1;
+    bottom: 128px;
+    cursor: pointer;
+
+    a, p {
+      color: $white;
+      opacity: 1;
+    }
+  }
+
+  .designer-avatar-name-container {
+    // filter: brightness(40%);
+    transition: 0.4s;
+  }
+
+  .designers-card-projects {
+    filter: brightness(40%);
+    transition: 0.4s;
+  }
+
+  .designers-page-bio {
+    // filter: brightness(40%);
+    transition: 0.4s;
+  }
+}

@@ -29,7 +29,6 @@ class PagesController < ApplicationController
 
   end
 
-
   def custom
 
   end

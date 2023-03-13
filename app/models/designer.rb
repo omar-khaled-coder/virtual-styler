@@ -4,4 +4,7 @@ class Designer < ApplicationRecord
   belongs_to :user
 
   has_many_attached :project_photos
+
+  has_many :chatrooms
+
 end

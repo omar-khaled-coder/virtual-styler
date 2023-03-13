@@ -12,6 +12,24 @@ Rails.application.routes.draw do
   get "/presets", to: "presets#presets"
 
   resources :customs, only: [:index, :show, :new, :create]
-  get "customs/dashboard", to: "customs#dashboard"
+
+
+  resources :bookings, only: [:show] do
+    resources :chatrooms, only: [:create]
+  end
+
+  resources :chatrooms, only: [:new, :show] do
+    resources :messages, only: :create
+  end
+
+
+  get "/user_dashboard", to: "customs#user_dashboard"
+
+
+  # resources :designers do
+  #   resources :customs, only: [:index, :new, :create]
+  # end
+
+  # resources :customs, only: [:show]
 
 end
