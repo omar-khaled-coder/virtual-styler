@@ -15,7 +15,11 @@
       <p class="p-class"><%= booking.created_at.strftime("%B %d, %Y")  %></p>
       <p class="p-class dashboard-avatar"><%= cl_image_tag booking.designer.user.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> <%= booking.designer.user.first_name %>  </p>
       <p class="p-class"><%= booking.status %></p>
-      <p class="p-class"><%= link_to "chat", "#", class: "butten-red-log-in" %>
+      <% if Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id) %>
+        <p class="p-class"><%= link_to "chat", chatroom_path(booking), class: "butten-red-log-in" %>
+      <% else %>
+        <p class="p-class"><%= link_to "chat", booking_chatrooms_path(booking), data: { turbo_method: :post }, class: "butten-red-log-in" %>
+      <% end %>
     </div>
   <% end %>
 <% end %>

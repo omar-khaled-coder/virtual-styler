@@ -14,9 +14,11 @@ Rails.application.routes.draw do
   resources :customs, only: [:index, :show, :new, :create]
 
 
+  resources :bookings, only: [:show] do
+    resources :chatrooms, only: [:create]
+  end
 
-
-  resources :chatrooms, only: [:new, :create, :show] do
+  resources :chatrooms, only: [:new, :show] do
     resources :messages, only: :create
   end
 
