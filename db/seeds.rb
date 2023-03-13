@@ -356,110 +356,162 @@ modern_preset14 = PresetItem.create({
 # })
 
 
+#---------------------------
 
+#Modern_LivingRoom_Part_2
 
-# Modern_LivingRoom_Part_2
-
-# puts "creating preset modern living room 2"
-# modern_living_room = Preset.create({
-#   style: "Modern",
-#   room: "Living room part 2"
-# })
-# puts "modern living room 2 preset created"
-# puts "attaching modern living room 2 photo"
-# livingroom_main_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Main_2.png', content_type: 'image/png')
-# puts "modern living room 2 photo attached"
-
-
-# puts "creating items for the modern living room"
-# livingroom_chair_black_2 = Item.create({
-#   name: "Chair Black AU",
-#   price: 50,
-#   description: "50 x 50 x 100"
-# })
-# livingroom_chair_black_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Chair_Black_2.png', content_type: 'image/png')
-# puts "created Chair Black"
-
-
-# livingroom_coffee_table_2 = Item.create({
-#   name: "Coffee Table Wood-1",
-#   price: 40,
-#   description: "40 x 40 x 60"
-# })
-# livingroom_coffee_table_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Coffee_Table_2.png', content_type: 'image/png')
-# puts "created LivingRoom_Coffee_Table_2"
-
-
-# livingroom_lamp_2 = Item.create({
-#   name: "High Lamp Black",
-#   price: 60,
-#   description: "20 x 20 x 120"
-# })
-# livingroom_lamp_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Coffee_Table_2.png', content_type: 'image/png')
-# puts "created modern lamp 2"
-
-
-# livingroom_lamp_muliple_2 = Item.create({
-#   name: "Muliple Lamp T-6",
-#   price: 200,
-#   description: "50 x 50 x 100"
-# })
-# livingroom_lamp_muliple_2.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Lamp_Muliple_2.png', content_type: 'image/png')
-# puts "created modern lamp muliple 2"
-
-
-# livingroom_pillow_2 = Item.create({
-#   name: "Pillow White",
-#   price: 20,
-#   description: "20 x 20 x 10"
-# })
-# livingroom_pillow_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Pillow_2.png', content_type: 'image/png')
-# puts "created livingroom pillow 2"
-
-
-# livingroom_sofa_2 = Item.create({
-#   name: "Corner Sofa Beige",
-#   price: 1200,
-#   description: "200 x 100 x 120"
-# })
-# livingroom_sofa_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Sofa_2.png', content_type: 'image/png')
-# puts "created modern sofa"
-
-
-# livingroom_carpet_gray_2 = Item.create({
-#   name: "Carpet Gray LV",
-#   price: 400,
-#   description: "200 x 200 x 5"
-# })
-# livingroom_carpet_gray_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Floor_Gray_2.png', content_type: 'image/png')
-# puts "created carpet gray"
-
-# livingroom_beige_curtain_2 = Item.create({
-#   name: "Curtain Beige 54",
-#   price: 600,
-#   description: "400 x 5 x 250"
-# })
-# livingroom_beige_curtain_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Beige_Curtain_2.png', content_type: 'image/png')
-# puts "created beige curtain"
-
-# livingroom_floor_gray_2 = Item.create({
-#   name: "floor Gray XL",
-#   price: 20,
-#   description: "50 x 20 x 5"
-# })
-# livingroom_floor_gray_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_Floor_Gray_2.png', content_type: 'image/png')
-# puts "created floor gray"
-
-# livingroom_white_paint_2 = Item.create({
-#   name: "Carpet Gray LV",
-#   price: 400,
-#   description: "200 x 200 x 5"
-# })
-# livingroom_white_paint_2.photo.attach(io: File.open(URI.open('')), filename: 'LivingRoom_White_Paint_2.png', content_type: 'image/png')
-# puts "created white paint"
+puts "creating preset modern living room 2"
+modern_living_room2 = Preset.create({
+  style: "Modern",
+  room: "Living room part 2"
+})
+puts "modern living room 2 preset created"
+puts "attaching modern living room 2 photo"
+modern_living_room2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675507/slack-imgs.com_uoxlly.png')), filename: 'LivingRoom_Main_2.png', content_type: 'image/png')
+puts "modern living room 2 photo attached"
 
 
 
+
+puts "creating items for the modern living room"
+livingroom_chair_black_2 = Item.create({
+  name: "Chair Black AU",
+  price: 50,
+  description: "50 x 50 x 100"
+})
+livingroom_chair_black_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675720/LivingRoom_Chair_Black_2_cpgkww.jpg')), filename: 'LivingRoom_Chair_Black_2.png', content_type: 'image/png')
+puts "created Chair Black"
+
+
+livingroom_coffee_table_2 = Item.create({
+  name: "Coffee Table Wood-1",
+  price: 40,
+  description: "40 x 40 x 60"
+})
+livingroom_coffee_table_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675723/LivingRoom_Coffee_Table_2_gddzmy.jpg')), filename: 'LivingRoom_Coffee_Table_2.png', content_type: 'image/png')
+puts "created LivingRoom_Coffee_Table_2"
+
+
+livingroom_lamp_2 = Item.create({
+  name: "High Lamp Black",
+  price: 60,
+  description: "20 x 20 x 120"
+})
+livingroom_lamp_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675723/LivingRoom_Coffee_Table_2_gddzmy.jpg')), filename: 'livingroom_lamp_2.png', content_type: 'image/png')
+
+puts "created modern lamp 2"
+
+
+livingroom_lamp_muliple_2 = Item.create({
+  name: "Muliple Lamp T-6",
+  price: 200,
+  description: "50 x 50 x 100"
+})
+livingroom_lamp_muliple_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675720/LivingRoom_Chair_Black_2_cpgkww.jpg')), filename: 'LivingRoom_Lamp_Muliple_2.png', content_type: 'image/png')
+puts "created modern lamp muliple 2"
+
+
+livingroom_pillow_2 = Item.create({
+  name: "Pillow White",
+  price: 20,
+  description: "20 x 20 x 10"
+})
+livingroom_pillow_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675721/LivingRoom_Pillow_2_jemzvm.jpg')), filename: 'LivingRoom_Pillow_2.png', content_type: 'image/png')
+puts "created livingroom pillow 2"
+
+
+livingroom_sofa_2 = Item.create({
+  name: "Corner Sofa Beige",
+  price: 1200,
+  description: "200 x 100 x 120"
+})
+livingroom_sofa_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675507/slack-imgs.com_uoxlly.png')), filename: 'LivingRoom_Sofa_2.png', content_type: 'image/png')
+puts "created modern sofa"
+
+
+livingroom_carpet_gray_2 = Item.create({
+  name: "Carpet Gray LV",
+  price: 400,
+  description: "200 x 200 x 5"
+})
+livingroom_carpet_gray_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675723/LivingRoom_Coffee_Table_2_gddzmy.jpg')), filename: 'LivingRoom_Floor_Gray_2.png', content_type: 'image/png')
+puts "created carpet gray"
+
+livingroom_beige_curtain_2 = Item.create({
+  name: "Curtain Beige 54",
+  price: 600,
+  description: "400 x 5 x 250"
+})
+livingroom_beige_curtain_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675720/LivingRoom_Beige_Curtain_2_mhcpkw.jpg')), filename: 'LivingRoom_Beige_Curtain_2.png', content_type: 'image/png')
+puts "created beige curtain"
+
+livingroom_floor_gray_2 = Item.create({
+  name: "floor Gray XL",
+  price: 20,
+  description: "50 x 20 x 5"
+})
+livingroom_floor_gray_2.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678675720/LivingRoom_Floor_gray_2_img0rg.jpg')), filename: 'LivingRoom_Floor_Gray_2.png', content_type: 'image/png')
+puts "created floor gray"
+
+
+
+
+
+
+
+
+
+modern_preset15 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_chair_black_2.id
+})
+
+
+modern_preset16 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_coffee_table_2.id
+})
+
+modern_preset17 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_lamp_2 .id
+})
+
+modern_preset18 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_lamp_muliple_2.id
+})
+
+modern_preset19 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_pillow_2.id
+})
+
+modern_preset20 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_sofa_2.id
+})
+
+modern_preset21 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_carpet_gray_2.id
+})
+
+modern_preset22 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_beige_curtain_2.id
+})
+
+modern_preset23 = PresetItem.create({
+  preset_id: modern_living_room2.id,
+  item_id: livingroom_floor_gray_2.id
+})
+
+
+
+
+
+#---------------------------
 # # BedRoom part 2
 
 # puts "creating preset modern bedroom 2"

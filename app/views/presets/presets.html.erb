@@ -1,6 +1,5 @@
 <div class="container">
-
-  <% if @preset === nil %>
+  <% if @presets === nil %>
     <h1>Bananas, nothing matched query</h1>
   <% else %>
 
@@ -13,54 +12,57 @@
     <span class="greyed-inactive">> Payment</span>
   </legend>
 
-    <h2 class="pt-4">Pick your Favorite design</h2>
+    <h2 class="pt-4">Pick your Favorite design <span class="control-button"> Previous</span><span class="control-button"> Next</span></h2>
 
-    <div class="row">
-      <div class="col-12 col-lg-8 mb-3 ps-0">
-        <div class="preset-main-image-container">
-          <%= cl_image_tag @preset.photo.key, class: "preset-main-image", :crop => "fill" %>
+    <% @presets.each do |preset| %>
+      <div class="row preset-div">
+        <div class="col-12 col-lg-8 mb-3 ps-0">
+          <div class="preset-main-image-container">
+            <%= cl_image_tag preset.photo.key, class: "preset-main-image", :crop => "fill" %>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <form id="preset-form"
+                action="/basket"
+                method="GET"
+                data-controller="count-item">
+
+            <div>
+              <div data-controller="total-price">
+                <div class="preset-items pe-2">
+                  <% preset.items.each do | item | %>
+                    <div class="d-flex item-card align-items-center mb-2">
+                      <%= cl_image_tag item.photo.key, :width => 80, :height => 80, :crop => "fill", class: "item-image p-2" %>
+                      <p class="mt-3 me-5 ps-2">
+                        <span class="template-item-name"><%= item.name %></span>
+                        <br>
+                        <span class="template-item-description"><%= item.description %></span>
+                      </p>
+                      <div class="cart-input ms-auto me-5 mb-3 d-flex flex-column">
+                        <div class="d-flex">
+                          <button class="minus" type="button" data-action="click->count-item#minus click->total-price#update">-</button>
+                          <input type="text" value="0" class="cart-input" name="<%= item.id %>" data-count-item-target="input" data-total-price-target="input">
+                          <button class="plus" type="button" data-action="click->count-item#add click->total-price#update">+</button>
+                        </div>
+                        <p class="item-price">$ <span data-total-price-target="unitprice" class="item-price"><%= item.price %></span></p>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+
+                <div class="total-template-price">
+                  <div class="total">Your total is : $ <span data-total-price-target="total" class="total-price">0</span></div>
+                  <input type="submit" value="Submit" class="button" style="border:none">
+                </div>
+
+              </div>
+            </div>
+          </form>
         </div>
       </div>
+    <% end %>
 
-      <div class="col-12 col-lg-4">
-        <form id="preset-form"
-              action="/basket"
-              method="GET"
-              data-controller="count-item">
-
-          <div>
-            <div data-controller="total-price">
-              <div class="preset-items pe-2">
-                <% @preset.items.each do | item | %>
-                  <div class="d-flex item-card align-items-center mb-2">
-                    <%= cl_image_tag item.photo.key, :width => 80, :height => 80, :crop => "fill", class: "item-image p-2" %>
-                    <p class="mt-3 me-5 ps-2">
-                      <span class="template-item-name"><%= item.name %></span>
-                      <br>
-                      <span class="template-item-description"><%= item.description %></span>
-                    </p>
-                    <div class="cart-input ms-auto me-5 mb-3 d-flex flex-column">
-                      <div class="d-flex">
-                        <button class="minus" type="button" data-action="click->count-item#minus click->total-price#update">-</button>
-                        <input type="text" value="0" class="cart-input" name="<%= item.id %>" data-count-item-target="input" data-total-price-target="input">
-                        <button class="plus" type="button" data-action="click->count-item#add click->total-price#update">+</button>
-                      </div>
-                      <p class="item-price">$ <span data-total-price-target="unitprice" class="item-price"><%= item.price %></span></p>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
-
-              <div class="total-template-price">
-                <div class="total">Your total is : $ <span data-total-price-target="total" class="total-price">0</span></div>
-                <input type="submit" value="Submit" class="button" style="border:none">
-              </div>
-
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
   <% end %>
 
 </div>
