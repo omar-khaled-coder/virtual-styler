@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
 
   resources :customs, only: [:index, :show, :new, :create]
+  get "/user_dashboard", to: "customs#user_dashboard"
 
 
   # resources :designers do
