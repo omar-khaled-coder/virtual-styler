@@ -1,6 +1,11 @@
 
 require 'open-uri'
 
+
+puts "destoying designers"
+Designer.destroy_all
+puts "designers destroyed"
+
 puts "destoying bookings"
 Booking.destroy_all
 puts "bookings destroyed"
@@ -30,15 +35,12 @@ Item.destroy_all
 puts "items destroyed"
 
 
-puts "destoying designers"
-Designer.destroy_all
-puts "designers destroyed"
 
 
 puts "starting to seed"
 puts "creating demo user"
 
-dave = User.create!({
+john = User.create!({
   first_name: "John",
   last_name: "Doe",
   email: "john@gmail.com",
@@ -46,95 +48,45 @@ dave = User.create!({
 })
 puts "created user John Doe, email: john@gmail.com password: 123456"
 puts "attaching John's avatar"
-dave.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
+john.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
 puts "attached John's avatar"
 
-
-
-
-
-
-
-
-puts "creating preset"
-modern_bedroom = Preset.create({
-  style: "Modern",
-  room: "Bedroom"
+dave = User.create!({
+  first_name: "Dave",
+  last_name: "Smith",
+  email: "dave@gmail.com",
+  password: "123456"
 })
-puts "modern bedroom preset created"
-puts "attaching modern bedroom photo"
-modern_bedroom.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678249532/BedRoom_main_sa7etc.jpg')), filename: 'modern_bedroom.png', content_type: 'image/png')
-puts "modern bedroom photo attached"
+puts "created user Dave smith, email: dave@gmail.com password: 123456"
+puts "attaching Dave's avatar"
+dave.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
+puts "attached Dave's avatar"
 
-
-
-
-
-
-
-
-
-
-
-
-puts "creating items for the modern bedroom"
-modern_bed = Item.create({
-  name: "Modern Bed",
-  price: 300,
-  description: "20 x 40 x 120"
+alice = User.create!({
+  first_name: "Alice",
+  last_name: "Kowalski",
+  email: "alice@gmail.com",
+  password: "123456"
 })
-modern_bed.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Bed_BedRoom_lqyftq.jpg')), filename: 'modern_bed.png', content_type: 'image/png')
-puts "created modern bed"
+puts "created user alice kowalsi, email: alice@gmail.com password: 123456"
+puts "attaching alice's avatar"
+alice.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
+puts "attached alice's avatar"
 
-modern_nightstand = Item.create({
-  name: "Modern nightstand",
-  price: 220,
-  description: "20 x 40 x 120"
-})
-modern_nightstand.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Nightstand_BedRoom_mtme3k.jpg')), filename: 'modern_nightstand.png', content_type: 'image/png')
-puts "created modern nightstand"
 
-modern_floor = Item.create({
-  name: "Modern floor",
-  price: 30,
-  description: "20 x 40 x 120"
-})
-modern_floor.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250022/Floor_BedRoom_kuwvrx.jpg')), filename: 'modern_floor.png', content_type: 'image/png')
-puts "created modern floor"
 
-modern_dresser = Item.create({
-  name: "Modern dresser",
-  price: 450,
-  description: "20 x 40 x 120"
-})
-modern_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Tall_Dresser__BedRoom_y7yviq.jpg')), filename: 'modern_dresser.png', content_type: 'image/png')
-puts "created modern dresser"
 
-modern_lamp = Item.create({
-  name: "Modern lamp",
-  price: 50,
-  description: "20 x 40 x 120"
-})
-modern_lamp.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250021/Lamp-stone_BedRoom_s_ly2ltw.jpg')), filename: 'modern_lamp.png', content_type: 'image/png')
-puts "created modern lamp"
 
-white_paint = Item.create({
-  name: "White paint",
-  price: 50,
-  description: "20 x 40 x 120"
-})
-white_paint.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/White_Paint_BedRoom_pdjz9i.jpg')), filename: 'white_paint.png', content_type: 'image/png')
-puts "created white paint"
 
-modern_short_dresser = Item.create({
-  name: "Short modern dresser",
-  price: 380,
-  description: "20 x 40 x 120"
-})
-modern_short_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Dresser_BedRoom_iif32a.jpg')), filename: 'modern_short_dresser', content_type: 'image/png')
-puts "created modern short dresser"
-
-puts "created all modern bedroom items with images attahced"
+# puts "creating preset"
+# modern_bedroom = Preset.create({
+#   style: "Modern",
+#   room: "Bedroom"
+# })
+# puts "modern bedroom preset created"
+# puts "attaching modern bedroom photo"
+# modern_bedroom.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678249532/BedRoom_main_sa7etc.jpg')), filename: 'modern_bedroom.png', content_type: 'image/png')
+# puts "modern bedroom photo attached"
 
 
 
@@ -147,44 +99,114 @@ puts "created all modern bedroom items with images attahced"
 
 
 
+# puts "creating items for the modern bedroom"
+# modern_bed = Item.create({
+#   name: "Modern Bed",
+#   price: 300,
+#   description: "20 x 40 x 120"
+# })
+# modern_bed.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Bed_BedRoom_lqyftq.jpg')), filename: 'modern_bed.png', content_type: 'image/png')
+# puts "created modern bed"
 
-puts "creating preset_item objects"
-modern_preset1 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_bed.id
-})
+# modern_nightstand = Item.create({
+#   name: "Modern nightstand",
+#   price: 220,
+#   description: "20 x 40 x 120"
+# })
+# modern_nightstand.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250023/Nightstand_BedRoom_mtme3k.jpg')), filename: 'modern_nightstand.png', content_type: 'image/png')
+# puts "created modern nightstand"
 
-modern_preset2 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_nightstand.id
-})
+# modern_floor = Item.create({
+#   name: "Modern floor",
+#   price: 30,
+#   description: "20 x 40 x 120"
+# })
+# modern_floor.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250022/Floor_BedRoom_kuwvrx.jpg')), filename: 'modern_floor.png', content_type: 'image/png')
+# puts "created modern floor"
 
-modern_preset3 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_floor.id
-})
+# modern_dresser = Item.create({
+#   name: "Modern dresser",
+#   price: 450,
+#   description: "20 x 40 x 120"
+# })
+# modern_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Tall_Dresser__BedRoom_y7yviq.jpg')), filename: 'modern_dresser.png', content_type: 'image/png')
+# puts "created modern dresser"
 
-modern_preset4 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_dresser.id
-})
+# modern_lamp = Item.create({
+#   name: "Modern lamp",
+#   price: 50,
+#   description: "20 x 40 x 120"
+# })
+# modern_lamp.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250021/Lamp-stone_BedRoom_s_ly2ltw.jpg')), filename: 'modern_lamp.png', content_type: 'image/png')
+# puts "created modern lamp"
 
-modern_preset5 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_lamp.id
-})
+# white_paint = Item.create({
+#   name: "White paint",
+#   price: 50,
+#   description: "20 x 40 x 120"
+# })
+# white_paint.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/White_Paint_BedRoom_pdjz9i.jpg')), filename: 'white_paint.png', content_type: 'image/png')
+# puts "created white paint"
 
-modern_preset6 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: white_paint.id
-})
+# modern_short_dresser = Item.create({
+#   name: "Short modern dresser",
+#   price: 380,
+#   description: "20 x 40 x 120"
+# })
+# modern_short_dresser.photo.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678250020/Dresser_BedRoom_iif32a.jpg')), filename: 'modern_short_dresser', content_type: 'image/png')
+# puts "created modern short dresser"
 
-modern_preset7 = PresetItem.create({
-  preset_id: modern_bedroom.id,
-  item_id: modern_short_dresser.id
-})
+# puts "created all modern bedroom items with images attahced"
 
-puts "created preset_items for modern bedroom"
+
+
+
+
+
+
+
+
+
+
+
+
+# puts "creating preset_item objects"
+# modern_preset1 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_bed.id
+# })
+
+# modern_preset2 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_nightstand.id
+# })
+
+# modern_preset3 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_floor.id
+# })
+
+# modern_preset4 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_dresser.id
+# })
+
+# modern_preset5 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_lamp.id
+# })
+
+# modern_preset6 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: white_paint.id
+# })
+
+# modern_preset7 = PresetItem.create({
+#   preset_id: modern_bedroom.id,
+#   item_id: modern_short_dresser.id
+# })
+
+# puts "created preset_items for modern bedroom"
 
 
 
@@ -327,11 +349,11 @@ modern_preset14 = PresetItem.create({
   item_id: modern_curtains.id
 })
 
-puts "creating preset_item objects"
-modern_preset14 = PresetItem.create({
-  preset_id: modern_living_room.id,
-  item_id: white_paint.id
-})
+# puts "creating preset_item objects"
+# modern_preset14 = PresetItem.create({
+#   preset_id: modern_living_room.id,
+#   item_id: white_paint.id
+# })
 
 
 
@@ -538,14 +560,12 @@ modern_preset14 = PresetItem.create({
 
 puts "creating designers"
 
-designer1 = Designer.create({
-  first_name: "Chris",
-  last_name: "Bumstead",
-  bio: "Meet Chris, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations."
+designer1 = Designer.create!({
+  bio: "Meet Dave, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations.",
+  user: dave
 })
 
 puts "created designer 1"
-designer1.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527072/jacked-factory-cbum-phone-line_dmmspe.jpg')), filename: 'designer1', content_type: 'image/png')
 puts "attached designer1 avatar"
 puts "attaching designer1 project photo"
 designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527296/maxresdefault_olb3qo.jpg')), filename: 'designer1-project1', content_type: 'image/png')
@@ -554,14 +574,12 @@ designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.c
 designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527330/interior-design-ideas-idea-1-35idmistonroad-anouska-tamony-1644331792_fj22rp.jpg')), filename: 'designer1-project4', content_type: 'image/png')
 puts "attached designer 1 project images"
 
-designer2 = Designer.create({
-  first_name: "Margaret ",
-  last_name: "Thatcher",
-  bio: "Meet Margaret, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result."
+designer2 = Designer.create!({
+  bio: "Meet Alice, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result.",
+  user: alice
 })
 
 puts "created designer 2"
-designer2.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528160/portrait-attractive-young-woman-who-sitting-cafe-cafe-urban-lifestyle-random-portrait-portrait-attractive-184127657_uzlgxz.jpg')), filename: 'designer2', content_type: 'image/png')
 puts "attached designer2 avatar"
 puts "attaching designer2 project photo"
 designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528181/Tendenze2020_kpwja7.jpg')), filename: 'designer2-project1', content_type: 'image/png')
