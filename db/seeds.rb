@@ -640,6 +640,62 @@ designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.c
 designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
 puts "attached designer 2 project images"
 
+designer1 = Designer.create!({
+  bio: "Meet Dave, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations.",
+  user: dave
+})
+
+puts "created designer 3"
+puts "attached designer 3 avatar"
+puts "attaching designer3 project photo"
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527296/maxresdefault_olb3qo.jpg')), filename: 'designer1-project1', content_type: 'image/png')
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527303/interior-design-ideas-for-hall-768x512_zuiklv.jpg')), filename: 'designer1-project2', content_type: 'image/png')
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527313/pexels-photo-1571460.jpeg_i2sa2e.jpg')), filename: 'designer1-project3', content_type: 'image/png')
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527330/interior-design-ideas-idea-1-35idmistonroad-anouska-tamony-1644331792_fj22rp.jpg')), filename: 'designer1-project4', content_type: 'image/png')
+puts "attached designer 3 project images"
+
+designer2 = Designer.create!({
+  bio: "Meet Alice, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result.",
+  user: alice
+})
+
+puts "created designer 4"
+puts "attached designer 4 avatar"
+puts "attaching designer 4 project photo"
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528181/Tendenze2020_kpwja7.jpg')), filename: 'designer2-project1', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528192/programs-interior-design-hero-fall-2021_qwiho0.jpg')), filename: 'designer2-project2', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528206/home-interior-ideas_me0o2b.jpg')), filename: 'designer2-project3', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
+puts "attached designer 4 project images"
+
+
+designer1 = Designer.create!({
+  bio: "Meet Dave, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations.",
+  user: dave
+})
+
+puts "created designer 5"
+puts "attached designer 5 avatar"
+puts "attaching designer 5 project photo"
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527296/maxresdefault_olb3qo.jpg')), filename: 'designer1-project1', content_type: 'image/png')
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527303/interior-design-ideas-for-hall-768x512_zuiklv.jpg')), filename: 'designer1-project2', content_type: 'image/png')
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527313/pexels-photo-1571460.jpeg_i2sa2e.jpg')), filename: 'designer1-project3', content_type: 'image/png')
+designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527330/interior-design-ideas-idea-1-35idmistonroad-anouska-tamony-1644331792_fj22rp.jpg')), filename: 'designer1-project4', content_type: 'image/png')
+puts "attached designer 5 project images"
+
+designer2 = Designer.create!({
+  bio: "Meet Alice, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result.",
+  user: alice
+})
+
+puts "created designer 6"
+puts "attached designer 6 avatar"
+puts "attaching designer 6 project photo"
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528181/Tendenze2020_kpwja7.jpg')), filename: 'designer2-project1', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528192/programs-interior-design-hero-fall-2021_qwiho0.jpg')), filename: 'designer2-project2', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528206/home-interior-ideas_me0o2b.jpg')), filename: 'designer2-project3', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
+puts "attached designer 6 project images"
 puts "
 
 
