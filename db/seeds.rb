@@ -2,9 +2,13 @@
 require 'open-uri'
 
 
-puts "destoying designers"
-Designer.destroy_all
-puts "designers destroyed"
+puts "destoying messages"
+Message.destroy_all
+puts "messages destroyed"
+
+puts "destoying chatroom"
+Chatroom.destroy_all
+puts "chatroom destroyed"
 
 puts "destoying bookings"
 Booking.destroy_all
@@ -18,9 +22,14 @@ puts "destoying carts"
 Cart.destroy_all
 puts "carts destroyed"
 
+puts "destoying designers"
+Designer.destroy_all
+puts "designers destroyed"
+
 puts "destoying preset_items"
 PresetItem.destroy_all
 puts "preset_items destroyed"
+
 
 puts "destoying users"
 User.destroy_all
@@ -48,33 +57,70 @@ john = User.create!({
 })
 puts "created user John Doe, email: john@gmail.com password: 123456"
 puts "attaching John's avatar"
-john.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
+john.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'john.png', content_type: 'image/png')
 puts "attached John's avatar"
 
-dave = User.create!({
-  first_name: "Dave",
+lily = User.create!({
+  first_name: "Lily",
   last_name: "Smith",
-  email: "dave@gmail.com",
+  email: "lily@gmail.com",
   password: "123456"
 })
-puts "created user Dave smith, email: dave@gmail.com password: 123456"
-puts "attaching Dave's avatar"
-dave.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
-puts "attached Dave's avatar"
+puts "created user lily smith, email: lily@gmail.com password: 123456"
+puts "attaching lily's avatar"
+lily.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'lily.png', content_type: 'image/png')
+puts "attached lily's avatar"
 
-alice = User.create!({
-  first_name: "Alice",
-  last_name: "Kowalski",
-  email: "alice@gmail.com",
+maxine = User.create!({
+  first_name: "Maxine",
+  last_name: "John",
+  email: "maxine@gmail.com",
   password: "123456"
 })
-puts "created user alice kowalsi, email: alice@gmail.com password: 123456"
-puts "attaching alice's avatar"
-alice.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'John_Doe.png', content_type: 'image/png')
-puts "attached alice's avatar"
+puts "created user maxine kowalsi, email: maxine@gmail.com password: 123456"
+puts "attaching maxine's avatar"
+maxine.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'maxine.png', content_type: 'image/png')
+puts "attached maxine's avatar"
 
+ethan = User.create!({
+  first_name: "Ethan",
+  last_name: "Davies",
+  email: "ethan@gmail.com",
+  password: "123456"
+})
+puts "attaching ethan's avatar"
+ethan.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'ethan.png', content_type: 'image/png')
+puts "attached ethan's avatar"
 
+olivia = User.create!({
+  first_name: "Olivia",
+  last_name: "Lee",
+  email: "olivia@gmail.com",
+  password: "123456"
+})
+puts "attaching olivia's avatar"
+olivia.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'olivia.png', content_type: 'image/png')
+puts "attached olivia's avatar"
 
+samuel = User.create!({
+  first_name: "Samuel",
+  last_name: "Chen",
+  email: "samuel@gmail.com",
+  password: "123456"
+})
+puts "attaching samuel's avatar"
+samuel.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'samuel.png', content_type: 'image/png')
+puts "attached samuel's avatar"
+
+ava = User.create!({
+  first_name: "Ava",
+  last_name: "Rodriguez",
+  email: "ava@gmail.com",
+  password: "123456"
+})
+puts "attachingava's avatar"
+ava.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'ava.png', content_type: 'image/png')
+puts "attachedava's avatar"
 
 
 
@@ -613,8 +659,8 @@ modern_preset23 = PresetItem.create({
 puts "creating designers"
 
 designer1 = Designer.create!({
-  bio: "Meet Dave, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations.",
-  user: dave
+  bio: "Known for her unique use of color and texture, Lily Smith is an up-and-coming interior designer with a passion for creating spaces that are both beautiful and functional. Her eclectic style blends vintage and modern elements to create spaces that are both comfortable and stylish.",
+  user: lily
 })
 
 puts "created designer 1"
@@ -627,8 +673,8 @@ designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.c
 puts "attached designer 1 project images"
 
 designer2 = Designer.create!({
-  bio: "Meet Alice, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result.",
-  user: alice
+  bio: "A master of minimalist design, Maxine Jones has a keen eye for creating spaces that are sleek, sophisticated, and clutter-free. Her designs are known for their simplicity and attention to detail, with a focus on creating a sense of calm and serenity in any room.",
+  user: maxine
 })
 
 puts "created designer 2"
@@ -640,61 +686,61 @@ designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.c
 designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
 puts "attached designer 2 project images"
 
-designer1 = Designer.create!({
-  bio: "Meet Dave, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations.",
-  user: dave
+designer3 = Designer.create!({
+  bio: "With a background in architecture, Ethan Davis approaches interior design with a focus on structure and form. His designs often feature clean lines, geometric shapes, and a mix of natural and industrial materials to create a unique and modern aesthetic.",
+  user: ethan
 })
 
 puts "created designer 3"
 puts "attached designer 3 avatar"
 puts "attaching designer3 project photo"
-designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527296/maxresdefault_olb3qo.jpg')), filename: 'designer1-project1', content_type: 'image/png')
-designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527303/interior-design-ideas-for-hall-768x512_zuiklv.jpg')), filename: 'designer1-project2', content_type: 'image/png')
-designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527313/pexels-photo-1571460.jpeg_i2sa2e.jpg')), filename: 'designer1-project3', content_type: 'image/png')
-designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527330/interior-design-ideas-idea-1-35idmistonroad-anouska-tamony-1644331792_fj22rp.jpg')), filename: 'designer1-project4', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527296/maxresdefault_olb3qo.jpg')), filename: 'designer1-project1', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527303/interior-design-ideas-for-hall-768x512_zuiklv.jpg')), filename: 'designer1-project2', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527313/pexels-photo-1571460.jpeg_i2sa2e.jpg')), filename: 'designer1-project3', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527330/interior-design-ideas-idea-1-35idmistonroad-anouska-tamony-1644331792_fj22rp.jpg')), filename: 'designer1-project4', content_type: 'image/png')
 puts "attached designer 3 project images"
 
-designer2 = Designer.create!({
-  bio: "Meet Alice, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result.",
-  user: alice
+designer4 = Designer.create!({
+  bio: "A lover of all things vintage, Olivia Lee brings a sense of nostalgia to her interior designs. Her spaces are filled with carefully curated antiques and vintage pieces, combined with modern elements to create a cozy and inviting atmosphere.",
+  user: olivia
 })
 
 puts "created designer 4"
 puts "attached designer 4 avatar"
 puts "attaching designer 4 project photo"
-designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528181/Tendenze2020_kpwja7.jpg')), filename: 'designer2-project1', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528192/programs-interior-design-hero-fall-2021_qwiho0.jpg')), filename: 'designer2-project2', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528206/home-interior-ideas_me0o2b.jpg')), filename: 'designer2-project3', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528181/Tendenze2020_kpwja7.jpg')), filename: 'designer2-project1', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528192/programs-interior-design-hero-fall-2021_qwiho0.jpg')), filename: 'designer2-project2', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528206/home-interior-ideas_me0o2b.jpg')), filename: 'designer2-project3', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
 puts "attached designer 4 project images"
 
 
-designer1 = Designer.create!({
-  bio: "Meet Dave, an innovative and versatile graphic designer with a talent for creating visually stunning designs. With a keen eye for detail and a passion for staying up-to-date with the latest design trends, Chris brings a fresh and modern approach to his work. Whether it's designing logos, websites, or marketing materials, Chris is dedicated to creating designs that effectively communicate his clients' brand and message. With a strong work ethic and excellent communication skills, Chris is committed to delivering high-quality work that exceeds his clients' expectations.",
-  user: dave
+designer5 = Designer.create!({
+  bio: "As a Feng Shui master, Samuel Chen creates spaces that are not only visually stunning but also promote positive energy and harmony. His designs are based on the principles of Feng Shui, incorporating elements such as natural light, plants, and water to create a sense of balance and tranquility.",
+  user: samuel
 })
 
 puts "created designer 5"
 puts "attached designer 5 avatar"
 puts "attaching designer 5 project photo"
-designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527296/maxresdefault_olb3qo.jpg')), filename: 'designer1-project1', content_type: 'image/png')
-designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527303/interior-design-ideas-for-hall-768x512_zuiklv.jpg')), filename: 'designer1-project2', content_type: 'image/png')
-designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527313/pexels-photo-1571460.jpeg_i2sa2e.jpg')), filename: 'designer1-project3', content_type: 'image/png')
-designer1.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527330/interior-design-ideas-idea-1-35idmistonroad-anouska-tamony-1644331792_fj22rp.jpg')), filename: 'designer1-project4', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527296/maxresdefault_olb3qo.jpg')), filename: 'designer1-project1', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527303/interior-design-ideas-for-hall-768x512_zuiklv.jpg')), filename: 'designer1-project2', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527313/pexels-photo-1571460.jpeg_i2sa2e.jpg')), filename: 'designer1-project3', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678527330/interior-design-ideas-idea-1-35idmistonroad-anouska-tamony-1644331792_fj22rp.jpg')), filename: 'designer1-project4', content_type: 'image/png')
 puts "attached designer 5 project images"
 
-designer2 = Designer.create!({
-  bio: "Meet Alice, an imaginative and creative interior designer with a keen eye for detail. With a passion for transforming spaces into beautiful and functional works of art, Margaret infuses her clients' needs and style into her eclectic designs. Inspired by nature, art, and architecture, she mixes and matches colors, textures, and patterns to create unique spaces that reflect her clients' personalities and tastes. With great communication and collaboration skills, Margaret listens carefully to her clients' feedback and works tirelessly to ensure their complete satisfaction with the end result.",
-  user: alice
+designer6 = Designer.create!({
+  bio: " A proponent of sustainable design, Ava Rodriguez creates spaces that are both beautiful and eco-friendly. Her designs often incorporate recycled and repurposed materials, as well as energy-efficient lighting and appliances, to create spaces that are as environmentally conscious as they are stylish.",
+  user: ava
 })
 
 puts "created designer 6"
 puts "attached designer 6 avatar"
 puts "attaching designer 6 project photo"
-designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528181/Tendenze2020_kpwja7.jpg')), filename: 'designer2-project1', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528192/programs-interior-design-hero-fall-2021_qwiho0.jpg')), filename: 'designer2-project2', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528206/home-interior-ideas_me0o2b.jpg')), filename: 'designer2-project3', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528181/Tendenze2020_kpwja7.jpg')), filename: 'designer2-project1', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528192/programs-interior-design-hero-fall-2021_qwiho0.jpg')), filename: 'designer2-project2', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528206/home-interior-ideas_me0o2b.jpg')), filename: 'designer2-project3', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project4', content_type: 'image/png')
 puts "attached designer 6 project images"
 puts "
 
