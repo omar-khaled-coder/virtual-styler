@@ -31,6 +31,10 @@ class CustomsController < ApplicationController
     @bookings = Booking.where(user_id: current_user.id)
   end
 
+  def model
+
+  end
+
   private
   def booking_params
     params.require(:booking).permit(:spec_text, :spec_file, :designer)
