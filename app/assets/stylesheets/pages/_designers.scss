@@ -16,7 +16,6 @@
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 150px;
   height: 150px;
   overflow: hidden;
@@ -103,22 +102,17 @@
     }
   }
 
-  .designer-avatar-name-container {
-    // filter: brightness(40%);
-    transition: 0.4s;
-  }
-
   .designers-card-projects {
     filter: brightness(40%);
     transition: 0.4s;
   }
-
-  .designers-page-bio {
-    // filter: brightness(40%);
-    transition: 0.4s;
-  }
 }
 
-.margin-left-row-0 {
-  margin-left: calc(-.5 * var(--bs-gutter-x));
+.compensation-margins-designers-container {
+ margin-left: -12px;
+ margin-right: -24px;
+}
+
+.height-100-percent {
+  height: 100%;
 }

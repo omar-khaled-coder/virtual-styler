@@ -39,7 +39,7 @@
 
 .designers-show-projects {
   overflow: hidden;
-  height: 26vh;
+  height: 100%;
   img {
     width: 100%;
     height: 100%;
@@ -47,6 +47,8 @@
     object-fit: cover;
   }
 }
+
+
 
 .designers-show-sumbit-button {
   margin: 20px 0px;

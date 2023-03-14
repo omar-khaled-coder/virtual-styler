@@ -1,8 +1,8 @@
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-12 p-0">
-          <div class="designers-show">
-            <div class="row m-0">
+<div class="container p-0 mt-4 height-100-percent">
+    <div class="row height-100-percent">
+        <div class="col-12 p-0 height-100-percent">
+          <div class="designers-show height-100-percent">
+            <div class="row m-0 height-100-percent">
               <div class="col-lg-3 col-12 ps-0">
                 <div class="designer-show-left">
                   <div class="designers-show-avatar">
@@ -25,11 +25,11 @@
 
                 </div>
               </div>
-              <div class="col-lg-9 col-12 pe-0">
-                <div class="designer-show-right">
-                  <div class="designers-show-projects-container">
+              <div class="col-lg-9 col-12 pe-0 height-100-percent">
+                <div class="designer-show-right height-100-percent">
+                  <div class="designers-show-projects-container height-100-percent">
                     <% @designer.project_photos.each do |photo| %>
-                      <div class="designers-show-projects">
+                      <div class="designers-show-projects height-100-percent">
                         <%=cl_image_tag photo.key, height: 1000, width: 1000, crop: :fill  %>
                       </div>
                     <% end %>
