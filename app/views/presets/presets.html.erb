@@ -11,8 +11,16 @@
     <span class="greyed-in">Pick a design</span></a>
     <span class="greyed-inactive">> Payment</span>
   </legend>
-
-    <h2 class="pt-4">Pick your Favorite design <span class="control-button"> Previous</span><span class="control-button"> Next</span></h2>
+    <div class="row">
+        <div class="col-12 col-lg-8 mb-3 ps-0 space-between">
+          <div class="template-title-div">
+            <h2 class="pt-4">Pick your Favorite design </h2>
+          </div>
+          <div class="arrows-template">
+            <span class="control-button"> <i class="fa-solid fa-arrow-left-long"></i></span><span>&nbsp;&nbsp;</span><span class="control-button"> <i class="fa-solid fa-arrow-right-long"></i></span>
+          </div>
+        </div>
+    </div>
 
     <% @presets.each do |preset| %>
       <div class="row preset-div">
@@ -54,7 +62,7 @@
                 </div>
 
 
-              <div class="total-template-price card_prire_bottun">
+              <div class="total-template-price card_prire_bottun" style="position: relative;">
                 <div class="total", style="padding-left: 10px;" >Your total is : $ <span data-total-price-target="total" class="total-price">0</span></div>
                 <input type="submit" value="Submit" class="button" style="border:none">
               </div>

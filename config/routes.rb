@@ -27,6 +27,23 @@ Rails.application.routes.draw do
   get "/designer_dashboard", to: "customs#designer_dashboard"
 
 
+
+
+
+
+
+
+  get "/model", to: "customs#model"
+
+
+
+
+
+
+  # resources :bookings, only: [:show] do
+  #   resources :model, only: [:show]
+  # end
+
   # resources :designers do
   #   resources :customs, only: [:index, :new, :create]
   # end
