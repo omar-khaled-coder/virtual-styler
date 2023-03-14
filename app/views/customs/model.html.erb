@@ -1,1 +1,55 @@
-<h1>model</h1>
+
+<div class="container">
+ <h1>model</h1>
+  <div class="row">
+
+    <div class="col">
+      <model-viewer src= "<%= asset_path "models/modern_interior_design.glb" %>"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls poster="poster.webp"
+        shadow-intensity="1"
+        class="model-3d">
+      </model-viewer>
+    </div>
+
+    <div class="col">
+          <div class="model-card-container">
+            <div class="model-item-card">
+                <p class="sample-text">Chair $100</p>
+                <%# <img class="chair" src="/chair.jpeg" alt=""> %>
+                <p class="sample-text">Table</p>
+                <p class="sample-text">Banana</p>
+            </div>
+            <div class="model-item-card">
+                <p class="sample-text">Chair $100</p>
+                <%# <img class="chair" src="/chair.jpeg" alt=""> %>
+                <p class="sample-text">Table</p>
+                <p class="sample-text">Banana</p>
+            </div>
+            <div class="model-item-card">
+                <p class="sample-text">Chair $100</p>
+                <%# <img class="chair" src="/chair.jpeg" alt=""> %>
+                <p class="sample-text">Table</p>
+                <p class="sample-text">Banana</p>
+            </div>
+            <div class="model-item-card">
+                <p class="sample-text">Chair $100</p>
+                <%# <img class="chair" src="/chair.jpeg" alt=""> %>
+                <p class="sample-text">Table</p>
+                <p class="sample-text">Banana</p>
+            </div>
+            <div class="model-item-card">
+                <p class="sample-text">Chair $100</p>
+                <%# <img class="chair" src="/chair.jpeg" alt=""> %>
+                <p class="sample-text">Table</p>
+                <p class="sample-text">Banana</p>
+            </div>
+          </div>
+      </div>
+
+
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  </div>
+</div>
