@@ -166,6 +166,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_071505) do
   add_foreign_key "designer_items", "designer_models"
   add_foreign_key "designer_models", "bookings"
   add_foreign_key "designer_models", "designers"
+  add_foreign_key "designers", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "preset_items", "items"
