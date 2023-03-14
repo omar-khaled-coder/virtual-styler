@@ -1,13 +1,13 @@
-<div class="container mt-4">
+<div class="container mt-4 p-0">
     <h1 mt-4>Our Designers</h1>
 
-    <div class="row margin-left-row-0">
+    <div class="row compensation-margins-designers-container">
       <% @designers.each do |designer| %>
         <div class="col-12 col-lg-4">
           <div class="designers-card">
             <div class="designer-avatar-name-container">
               <div class="designers-card-avatar">
-                <%= cl_image_tag designer.user.avatar.key, height: 200, width: 200, crop: :fill  %>
+                <%= cl_image_tag designer.user.avatar.key, crop: :fill  %>
               </div>
 
               <div class="designers-card-name">
@@ -20,16 +20,16 @@
               <p><%= designer.bio %></p>
             </div>
 
-              <div class="designers-card-projects-container">
-                <% designer.project_photos.first(2).each do |photo| %>
-                  <div class="designers-card-projects">
-                    <%=cl_image_tag photo.key, height: 1000, width: 1000, crop: :fill  %>
-                  </div>
-                <% end %>
-              </div>
-              <div class="designers-card-btn-container d-flex justify-content-center">
-                  <%= link_to "Show more", custom_path(designer), class: "designers-card-sumbit-button button" %>
-              </div>
+            <div class="designers-card-projects-container">
+              <% designer.project_photos.first(2).each do |photo| %>
+                <div class="designers-card-projects">
+                  <%=cl_image_tag photo.key, height: 800, width: 800, crop: :fill  %>
+                </div>
+              <% end %>
+            </div>
+            <div class="designers-card-btn-container d-flex justify-content-center">
+                <%= link_to "Show more", custom_path(designer), class: "designers-card-sumbit-button button" %>
+            </div>
           </div>
         </div>
       <% end %>
