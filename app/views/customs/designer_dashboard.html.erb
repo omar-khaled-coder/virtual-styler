@@ -1,23 +1,29 @@
-
+<h1>engineer</h1>
 <div class="container">
     <h1>Bookings</h1>
     <% if @bookings.empty? %>
       <h1>You don't have any bookings yet!</h1>
     <% else %>
       <div class="booking-item">
-        <p class="p-class">Designer</p>
+        <p class="p-class">Client</p>
         <p class="p-class content-place">Booked on</p>
         <p class="p-class content-place">Status</p>
         <p class="p-class content-place"> </p>
       </div>
+
       <% @bookings.each do |booking| %>
 
         <div class="booking-item">
 
           <div class="p-class dashboard-avatar">
-            <%= cl_image_tag booking.designer.user.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle" %>
+
+              <% if booking.user.avatar.key.nil?%>
+                  <%= image_tag "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80", height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% else %>
+                <%= cl_image_tag booking.user.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle" %>
+              <% end %>
             <div class="designer-name-dashboard">
-              <%= booking.designer.user.first_name %>
+              <%= booking.user.first_name %>
             </div>
           </div>
 
@@ -47,11 +53,26 @@
               <i class="fa-solid fa-cube dashboard-icons"></i>
             </div>
 
+            <div class="p-class content-place">
+
+              <% if booking.status == "pending"%>
+                <div>
+                  <%= link_to booking_path(booking.id, status: "confirmed"), data: {turbo_method: :put} do %>
+                    <i class="fa-solid fa-square-check content-place"></i>
+                  <% end %>
+                </div>
+
+                <div>
+                  <%= link_to booking_path(booking.id, status: "declined"), data: {turbo_method: :put}, class: " btn-danger" do %>
+                    <i class="fa-regular fa-circle-xmark content-place"></i>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
           </div>
 
-
-
         </div>
+
       <% end %>
     <% end %>
 </div>

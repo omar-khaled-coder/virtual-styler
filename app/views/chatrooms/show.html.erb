@@ -1,6 +1,7 @@
 
 <div class="container chatroom">
   <h1>Chat between User: <%= @chatroom.user.first_name %> and Designer: <%= @chatroom.designer.user.first_name %></h1>
+  <h1>Chat with <%= @chat_with_user.first_name %> <code> kind of <%= @chat_with_user.designer? ? "Designer" : "Normal User" %></code></h1>
 
   <div class="messages">
     <% @chatroom.messages.each do |message| %>
@@ -27,6 +28,6 @@
   <%= f.submit "Send", class: "btn btn-primary mb-3" %>
 <% end %>
 
-
+<%= console %>
 
 </div>

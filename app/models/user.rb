@@ -18,6 +18,10 @@ class User < ApplicationRecord
 
   has_many :chatrooms
   has_many :messages
+
+  def designer?
+    !designer.nil?
+  end
 end
 
 # Path: app/controllers/application_controller.rb

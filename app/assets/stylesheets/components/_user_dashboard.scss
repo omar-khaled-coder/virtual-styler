@@ -2,6 +2,7 @@
   display: flex;
   margin-top: 12px;
   border-bottom: 1px solid black;
+  margin-bottom: 12px;
 }
 
 
@@ -30,6 +31,8 @@
 
 .dashboard-icons{
   margin-left: 10px;
+  display: flex;
+  flex-direction: row;
 }
 
 .content-place{
