@@ -683,11 +683,11 @@ puts "created designer 2"
 puts "attached designer2 avatar"
 puts "attaching designer2 project photo"
 designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678528213/WhatsApp-Image-2021-05-20-at-19.35.10-1_l4nvs0.jpg')), filename: 'designer2-project1', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project2', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project3', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project4', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project5', content_type: 'image/png')
-designer2.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project6', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761889/design32_720_mxxvep.jpg')), filename: 'designer2-project2', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761889/design33_720_uawjmw.jpg')), filename: 'designer2-project3', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761889/design31_720_zuoqhz.jpg')), filename: 'designer2-project4', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761889/design30_720_oj1wfg.jpg')), filename: 'designer2-project5', content_type: 'image/png')
+designer2.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761889/design28_720_g2x4bp.jpg')), filename: 'designer2-project6', content_type: 'image/png')
 
 puts "attached designer 2 project images"
 
@@ -699,12 +699,12 @@ designer3 = Designer.create!({
 puts "created designer 3"
 puts "attached designer 3 avatar"
 puts "attaching designer3 project photo"
-designer3.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project1', content_type: 'image/png')
-designer3.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project2', content_type: 'image/png')
-designer3.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project3', content_type: 'image/png')
-designer3.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project4', content_type: 'image/png')
-designer3.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project5', content_type: 'image/png')
-designer3.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project6', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761889/design29_720_c3omnm.jpg')), filename: 'designer1-project1', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761888/design24_720_pfaahc.jpg')), filename: 'designer1-project2', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761888/design27_720_l8gkoa.jpg')), filename: 'designer1-project3', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761888/design26_720_qjovnr.jpg')), filename: 'designer1-project4', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761888/design22_720_qjryuw.jpg')), filename: 'designer1-project5', content_type: 'image/png')
+designer3.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761888/design23_720_nalwl7.jpg')), filename: 'designer1-project6', content_type: 'image/png')
 puts "attached designer 3 project images"
 
 designer4 = Designer.create!({
@@ -715,12 +715,12 @@ designer4 = Designer.create!({
 puts "created designer 4"
 puts "attached designer 4 avatar"
 puts "attaching designer 4 project photo"
-designer4.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project1', content_type: 'image/png')
-designer4.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project2', content_type: 'image/png')
-designer4.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project3', content_type: 'image/png')
-designer4.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project4', content_type: 'image/png')
-designer4.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project5', content_type: 'image/png')
-designer4.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project6', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761885/design3_720_cn5w5l.jpg')), filename: 'designer2-project1', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761885/design1_720_gsizoc.jpg')), filename: 'designer2-project2', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761886/design2_720_cdciiv.jpg')), filename: 'designer2-project3', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761886/design4_720_vfu9gw.jpg')), filename: 'designer2-project4', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761886/design6_720_hve5em.jpg')), filename: 'designer2-project5', content_type: 'image/png')
+designer4.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761886/design5_720_u9o6wf.jpg')), filename: 'designer2-project6', content_type: 'image/png')
 puts "attached designer 4 project images"
 
 
@@ -732,12 +732,12 @@ designer5 = Designer.create!({
 puts "created designer 5"
 puts "attached designer 5 avatar"
 puts "attaching designer 5 project photo"
-designer5.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project1', content_type: 'image/png')
-designer5.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project2', content_type: 'image/png')
-designer5.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project3', content_type: 'image/png')
-designer5.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project4', content_type: 'image/png')
-designer5.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project5', content_type: 'image/png')
-designer5.project_photos.attach(io: File.open(URI.open('')), filename: 'designer1-project6', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761888/design25_720_q9cfhl.jpg')), filename: 'designer1-project1', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design20_720_gpctsy.jpg')), filename: 'designer1-project2', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design21_720_slju1u.jpg')), filename: 'designer1-project3', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design15_720_rjnbdu.jpg')), filename: 'designer1-project4', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design13_720_bbccyb.jpg')), filename: 'designer1-project5', content_type: 'image/png')
+designer5.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design16_720_qp6gxw.jpg')), filename: 'designer1-project6', content_type: 'image/png')
 puts "attached designer 5 project images"
 
 designer6 = Designer.create!({
@@ -748,12 +748,12 @@ designer6 = Designer.create!({
 puts "created designer 6"
 puts "attached designer 6 avatar"
 puts "attaching designer 6 project photo"
-designer6.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project1', content_type: 'image/png')
-designer6.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project2', content_type: 'image/png')
-designer6.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project3', content_type: 'image/png')
-designer6.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project4', content_type: 'image/png')
-designer6.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project5', content_type: 'image/png')
-designer6.project_photos.attach(io: File.open(URI.open('')), filename: 'designer2-project6', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design14_720_w8em1o.jpg')), filename: 'designer2-project1', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design10_720_pfzxhu.jpg')), filename: 'designer2-project2', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design12_720_tzht1n.jpg')), filename: 'designer2-project3', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design11_720_pekmuu.jpg')), filename: 'designer2-project4', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761886/design7_720_ev2lfb.jpg')), filename: 'designer2-project5', content_type: 'image/png')
+designer6.project_photos.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678761887/design9_720_ccczj1.jpg')), filename: 'designer2-project6', content_type: 'image/png')
 puts "attached designer 6 project images"
 puts "
 
