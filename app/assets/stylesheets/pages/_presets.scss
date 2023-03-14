@@ -110,3 +110,14 @@ color: $gray;
   border-radius: 15px;
   border: solid 1px #ebebeb;
 }
+
+.arrows-template {
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}

@@ -94,7 +94,7 @@
 
   .designers-card-sumbit-button {
     opacity: 1;
-    bottom: 128px;
+    bottom: 60px;
     cursor: pointer;
 
     a, p {
@@ -117,4 +117,8 @@
     // filter: brightness(40%);
     transition: 0.4s;
   }
+}
+
+.margin-left-row-0 {
+  margin-left: calc(-.5 * var(--bs-gutter-x));
 }

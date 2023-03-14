@@ -1,33 +1,42 @@
 <div class="container mt-4">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 p-0">
           <div class="designers-show">
-            <div class="designer-avatar-name-show-container">
-              <div class="designers-show-avatar">
-                <%= cl_image_tag @designer.user.avatar.key, height: 200, width: 200, crop: :fill  %>
-              </div>
-
-              <div class="designers-show-name">
-                <h2><%= @designer.user.first_name %> <%= @designer.user.last_name %> </h2>
-              </div>
-            </div>
-
-            <div class="designers-show-bio">
-              <p><%= @designer.bio %></p>
-            </div>
-
-              <div class="designers-show-projects-container">
-                <% @designer.project_photos.each do |photo| %>
-                  <div class="designers-show-projects">
-                    <%=cl_image_tag photo.key, height: 1000, width: 1000, crop: :fill  %>
+            <div class="row m-0">
+              <div class="col-lg-3 col-12 ps-0">
+                <div class="designer-show-left">
+                  <div class="designers-show-avatar">
+                    <%= cl_image_tag @designer.user.avatar.key, height: 200, width: 200, crop: :fill  %>
                   </div>
-                <% end %>
-              </div>
-              <div class="designers-show-btn-container d-flex justify-content-center">
-                <div class="designers-show-sumbit-button button">
-                    <%= link_to "Book me", new_custom_path(@designer)  %>
+
+                  <div class="designers-show-name">
+                    <h2><%= @designer.user.first_name %> <%= @designer.user.last_name %> </h2>
+                  </div>
+
+                  <div>
+                    <a href="#">www.interior-design.com</a>
+                  </div>
+
+                  <div class="designers-show-bio">
+                    <p><%= @designer.bio %></p>
+                  </div>
+
+                  <%= link_to "Book Designer", new_custom_path(@designer), class: "designers-show-sumbit-button button"  %>
+
                 </div>
               </div>
+              <div class="col-lg-9 col-12 pe-0">
+                <div class="designer-show-right">
+                  <div class="designers-show-projects-container">
+                    <% @designer.project_photos.each do |photo| %>
+                      <div class="designers-show-projects">
+                        <%=cl_image_tag photo.key, height: 1000, width: 1000, crop: :fill  %>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
     </div>

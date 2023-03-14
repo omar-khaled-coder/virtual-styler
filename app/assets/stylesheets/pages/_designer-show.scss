@@ -22,30 +22,18 @@
 
 .designers-show-name {
   color: #F8F8F8;
-  display: flex;
-  align-items: flex-start;
-  margin-left: 20px;
+  padding-top: 20px;
 }
 
 .designers-show-bio {
   color: $light-gray;
   width: 100%;
   padding-top: 20px;
-
-  p {
-    overflow:hidden;
-    -webkit-box-orient: vertical;
-    display: block;
-    display: -webkit-box;
-    overflow: hidden !important;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-  }
 }
 
 .designers-show-projects-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
@@ -60,17 +48,13 @@
   }
 }
 
-.designers-show .designers-show-sumbit-button {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: bottom 0.3s ease-out, opacity 0.3s;
-  opacity: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
+.designers-show-sumbit-button {
+  margin: 20px 0px;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 .designers-show-btn-container {
@@ -82,4 +66,14 @@
   transition: 0.3s;
   position: relative;
   margin-bottom: 20px;
+
+}
+
+.designers-show-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.designers-show-right {
+  grid-template-columns: 2fr;
 }

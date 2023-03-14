@@ -8,12 +8,14 @@
   text-decoration: none;
   color: white;
   display: inline-block;
+  transition: 0.3s;
 
 }
 
 .button:hover {
   background-color: #E18E5C;
   color: white;
+  transition: 0.3s;
 }
 
 .link-center {
