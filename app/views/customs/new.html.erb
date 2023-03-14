@@ -1,20 +1,23 @@
 <div class="container p-0">
 
-<div class="row mt-4 p-0">
-  <div class="col-6">
-  <h1>Provide your Information</h1>
-  <p> Plese fill in the form as detailed as possible.
-    Provide your room dimensions, furnitures, and any other information that you think is relevant.
-    We will get back to you as soon as possible.
-    For the full experience, please upload a floor plan of your room, or even a LIDAR scan of your room!
-  </p>
+  <div class="row mt-4 p-0 d-flex justify-content-center align-items-center">
+    <h1>Provide your Information</h1>
 
+      <div class="col-6 d-flex align-items-center" style="height: 85vh;">
+        <div class="new-booking-form-container ">
 
-
-    <%= simple_form_for @booking, url: customs_path(designer: @designer) do |f| %>
-      <%= f.input :spec_file, as: :file %>
-      <%= f.input :spec_text %>
-      <%= f.submit class: "button"%>
-    <% end %>
+          <%= simple_form_for @booking, url: customs_path(designer: @designer) do |f| %>
+            <%= f.input :spec_file, as: :file %>
+            <%= f.input :spec_text %>
+              <p> Please fill in the form as detailed as possible.
+                Provide your room dimensions, furnitures, and any other information that you think is relevant.
+                We will get back to you as soon as possible.
+                For the full experience, please upload a floor plan of your room, or even a LIDAR scan of your room!
+              </p>
+              </br>
+            <%= f.submit class: "button"%>
+          <% end %>
+        </div>
+      </div>
   </div>
 </div>
