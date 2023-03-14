@@ -4,10 +4,10 @@
     <% if @bookings.empty? %>
       <h1>You don't have any bookings yet!</h1>
     <% else %>
-      <div class="booking-item">
+      <div class="booking-item" style="background-color: #d7d7d9;">
         <p class="p-class">Designer</p>
         <p class="p-class content-place">Booked on</p>
-        <p class="p-class content-place">Status</p>
+        <p class="p-class content-place">Status button</p>
         <p class="p-class content-place"> </p>
       </div>
       <% @bookings.each do |booking| %>
