@@ -31,8 +31,11 @@ class CustomsController < ApplicationController
     @bookings = Booking.where(user_id: current_user.id)
   end
 
+  def designer_dashboard
+    @bookings = Booking.where(designer_id: current_user.id)
+  end
+  
   def model
-
   end
 
   private

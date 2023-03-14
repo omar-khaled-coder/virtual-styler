@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :customs, only: [:index, :show, :new, :create]
 
 
-  resources :bookings, only: [:show] do
+  resources :bookings, only: [:show, :update] do
     resources :chatrooms, only: [:create]
   end
 
@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
 
   get "/user_dashboard", to: "customs#user_dashboard"
+  get "/designer_dashboard", to: "customs#designer_dashboard"
 
 
 
