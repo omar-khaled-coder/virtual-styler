@@ -22,9 +22,11 @@
               <% else %>
                 <%= cl_image_tag booking.user.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle" %>
               <% end %>
-            <div class="designer-name-dashboard">
-              <%= booking.user.first_name %>
-            </div>
+
+              <div class="designer-name-dashboard">
+                <%= booking.user.first_name %>
+              </div>
+
           </div>
 
           <div class="p-class content-place">
