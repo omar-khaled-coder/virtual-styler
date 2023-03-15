@@ -1,11 +1,17 @@
-<div class="container vh-100">
+<div class="container px-0 vh-100">
   <legend class="style-legend">
-  <a href="javascript:history.back()"><span class="greyed-out">Pick a style </span></a>
-  <span class="greyed-in">> </span></a>
-  <a href="javascript:history.back()"><span class="greyed-out">Pick a room</span></a>
-  <span class="greyed-in">> </span></a>
-  <a href="javascript:history.back()"><span class="greyed-out">Pick a design</span></a>
-  <span class="greyed-in">> Payment</span>
+    <a href="javascript:history.back()">
+      <span class="greyed-out">Pick a style </span>
+    </a>
+    <span class="greyed-in">> </span>
+    <a href="javascript:history.back()">
+      <span class="greyed-out">Pick a room</span>
+    </a>
+    <span class="greyed-in">> </span>
+    <a href="javascript:history.back()">
+      <span class="greyed-out">Pick a design</span>
+    </a>
+    <span class="greyed-in">> Payment</span>
   </legend>
   <h2 class="pt-4">Payment</h2>
 
@@ -13,7 +19,7 @@
     <div class="row upper"></div>
 
     <div class="row mb-5">
-      <div class="col-12 col-lg-6 mb-5 order-2 order-lg-1">
+      <div class="col-12 col-lg-6 mb-5 order-2 order-lg-1 ps-0 pe-2">
         <div class="payment-right" style="position: relative;">
           <h3>Order Summary</h3>
           <div class="row item preset-items-basket" style="margin-left: 0px;">
@@ -36,38 +42,46 @@
               <% end %>
             </div>
           </div>
-          <div class="payment-total">Your total is: $<span id="sum"></span></div>
+          <div class="payment-total d-flex flex-column justify-content-end"><div>Your total is: $<span id="sum"></span></div></div>
         </div>
       </div>
 
-      <div class="col-12 col-lg-6 mb-5 order-1 order-lg-2">
-        <div class=" box1">
-          <div class="row">
+      <div class="col-12 col-lg-6 mb-5 order-1 order-lg-2 d-flex ps-2 pe-0">
+        <div class="box1">
+          <div>
             <h3>Payment</h3>
             <div class="icons">
               <img src="https://img.icons8.com/color/48/000000/visa.png"/>
               <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
               <img src="https://img.icons8.com/color/48/000000/maestro.png"/>
             </div>
-          </div>
-          <div>
-            <form class="right-noshadow">
-              <span>Cardholder's name:</span>
-              <input class="pay-fild" placeholder="Linda Williams">
-              <span>Card Number:</span>
-              <input class="pay-fild" placeholder="0125 6780 4567 9909">
-              <div class="row">
-                <div class="col-4 expiry-date"><span>Expiry date:</span>
-                  <input class="pay-fild" placeholder="YY/MM">
+
+
+            <form class="mt-4">
+              <div>
+                <span>Cardholder's name:</span>
+                <input class="pay-fild" placeholder="Linda Williams">
+                <span>Card Number:</span>
+                <input class="pay-fild" placeholder="0125 6780 4567 9909">
+                <div class="row">
+                  <div class="col-4 expiry-date">
+                    <span>Expiry date:</span>
+                    <input class="pay-fild" placeholder="YY/MM">
+                  </div>
+                  <div class="col-4">
+                    <span>CVV:</span>
+                    <input class="pay-fild" id="cvv">
+                  </div>
                 </div>
-                <div class="col-4"><span>CVV:</span>
-                  <input class="pay-fild" id="cvv">
+                <div>
+                  <input class="pay-fild" type="checkbox" id="save_card" class="align-left">
+                  <label for="save_card">Save card details to wallet</label>
                 </div>
               </div>
-              <input class="pay-fild" type="checkbox" id="save_card" class="align-left">
-              <label for="save_card">Save card details to wallet</label>
-              <div class="button-div-basket">
-                <%= link_to "Confirm payment", paymentdone_path, class: "button" %>
+                <div>
+                <div class="d-flex flex-column justify-content-end vh-20">
+                  <%= link_to "Confirm payment", paymentdone_path, class: "button button-div-basket" %>
+                </div>
               </div>
             </form>
           </div>

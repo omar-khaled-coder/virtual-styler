@@ -24,7 +24,7 @@
 
     <% @presets.each do |preset| %>
       <div class="row preset-div">
-        <div class="col-12 col-lg-8 mb-3 ps-0">
+        <div class="col-12 col-lg-8 ps-0">
           <div class="preset-main-image-container">
             <%= cl_image_tag preset.photo.key, class: "preset-main-image", :crop => "fill" %>
           </div>
@@ -34,11 +34,12 @@
           <form id="preset-form"
                 action="/basket"
                 method="GET"
-                data-controller="count-item">
+                data-controller="count-item"
+                class="h-100">
 
 
-            <div>
-              <div data-controller="total-price">
+            <div class="h-100">
+              <div data-controller="total-price" class="d-flex flex-column justify-content-between h-100">
                 <div class="preset-items pe-2">
                   <% preset.items.each do | item | %>
                     <div class="d-flex item-card align-items-center mb-2">
