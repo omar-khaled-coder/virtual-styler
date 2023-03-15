@@ -1,5 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-omar  navbar-lewagon">
-  <div class="container p-0">
+  <% if action_name == "home" || action_name == "design" || action_name == "paymentdone" %>
+    <div class="w-100 px-3 d-flex justify-content-between">
+  <% else %>
+   <div class="container p-0">
+  <% end %>
     <%= link_to root_path, class: "navbar-brand" do %>
       <%="Virtual Styler"%>
     <% end %>
