@@ -12,7 +12,6 @@ class PagesController < ApplicationController
   # contains items added by the user
   def basket
     @cart = current_user.cart || Cart.create(user_id: current_user.id)
-    raise
     params.delete(:controller)
     params.delete(:action)
     cart_items = []
