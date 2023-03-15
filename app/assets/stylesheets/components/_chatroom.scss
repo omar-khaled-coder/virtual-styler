@@ -6,21 +6,33 @@
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
-  h1 {
-    border-bottom: 1px solid $gray-200;
+
+  .hclass {
     margin-bottom: 0;
     padding: 1rem;
   }
 
   .messages {
     height: 100%;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     padding: 1rem;
+    background-color: $light-gray;
+    border-radius: 12px;
+    margin-right: 18px;
+    margin-left: 18px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    word-wrap: break-word;
+
+  }
+  .messages::-webkit-scrollbar-track {
+    border-radius: 12px;
   }
 
   #new_message {
-    border-top: 1px solid $gray-200;
     padding: 1rem;
 
     .form-group {
@@ -30,4 +42,15 @@
 }
 .iput-fild{
   width: 100%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 10px;
+
+}
+
+.color-name{
+  color: $gray2;
+  font-family: $body-font;
 }
