@@ -32,19 +32,19 @@
             <% if Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id) %>
               <div>
                 <%= link_to chatroom_path(Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id)), class: "buttn-red-log-in" do %>
-                  <i class="fa-regular fa-comment-dots content-place"></i>
+                  <i class="fa-regular fa-comment-dots content-place" style="font-size: 2em;"></i>
                 <% end %>
               </div>
             <% else %>
               <div>
                 <%= link_to booking_chatrooms_path(booking), data: { turbo_method: :post }, class: "butten-red-log-in" do %>
-                  <i class="fa-regular fa-comment-dots content-place"></i>
+                  <i class="fa-regular fa-comment-dots content-place" style="font-size: 2em;"></i>
                 <% end%>
               </div>
             <% end %>
             <div>
                 <%= link_to booking_3_model_path do %>
-              <i class="fa-solid fa-cube dashboard-icons"></i>
+              <i class="fa-solid fa-cube dashboard-icons" style="font-size: 2em;"></i>
                 <% end%>
             </div>
           </div>
