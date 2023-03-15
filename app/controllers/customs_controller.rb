@@ -32,9 +32,9 @@ class CustomsController < ApplicationController
   end
 
   def designer_dashboard
-    @bookings = Booking.where(designer_id: current_user.id)
+    @bookings = Booking.where(designer_id: current_user.designer.id)
   end
-  
+
   def model
   end
 
