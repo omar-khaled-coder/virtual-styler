@@ -24,27 +24,46 @@
             <%= booking.created_at.strftime("%B %d, %Y") %>
           </div>
 
+
+
+
+
+
+
+
+
+
+
           <div class="p-class content-place">
             <p class=" content-place status-<%= booking.status %>"><%= booking.status %></p>
           </div>
+
+
+
+
+
+
+
+
+
 
           <div class="p-class content-place booking-date">
             <% if Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id) %>
               <div>
                 <%= link_to chatroom_path(Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id)), class: "buttn-red-log-in" do %>
-                  <i class="fa-regular fa-comment-dots content-place" style="font-size: 2em;"></i>
+                  <i class="fa-regular fa-comment-dots content-place dashboard-icon" ></i>
                 <% end %>
               </div>
             <% else %>
               <div>
                 <%= link_to booking_chatrooms_path(booking), data: { turbo_method: :post }, class: "butten-red-log-in" do %>
-                  <i class="fa-regular fa-comment-dots content-place" style="font-size: 2em;"></i>
+                  <i class="fa-regular fa-comment-dots content-place dashboard-icon" ></i>
                 <% end%>
               </div>
             <% end %>
             <div>
                 <%= link_to booking_3_model_path do %>
-              <i class="fa-solid fa-cube dashboard-icons" style="font-size: 2em;"></i>
+              <i class="fa-solid fa-cube dashboard-icons dashboard-icon" ></i>
                 <% end%>
             </div>
           </div>

@@ -1,10 +1,10 @@
-<h1>engineer</h1>
+
 <div class="container">
     <h1>Bookings</h1>
     <% if @bookings.empty? %>
       <h1>You don't have any bookings yet!</h1>
     <% else %>
-      <div class="booking-item">
+      <div class="booking-item"  style="background-color: #d7d7d9;">
         <p class="p-class">Client</p>
         <p class="p-class content-place">Booked on</p>
         <p class="p-class content-place">Status</p>
@@ -35,24 +35,26 @@
 
 
           <div class="p-class content-place">
-          <%= booking.status %>
+            <p class=" content-place status-<%= booking.status %>"><%= booking.status %></p>
           </div>
 
           <div class="p-class content-place">
             <% if Chatroom.find_by(user_id: booking.user.id, designer_id: current_user.designer.id) %>
               <div><%= link_to chatroom_path(Chatroom.find_by(user_id: booking.user.id, designer_id: current_user.designer.id)), class: "buttn-red-log-in" do %>
-                <i class="fa-regular fa-comment-dots content-place"></i>
+                <i class="fa-regular fa-comment-dots content-place dashboard-icon"></i>
                 <% end %>
               </div>
             <% else %>
               <div><%= link_to booking_chatrooms_path(booking), data: { turbo_method: :post }, class: "butten-red-log-in" do %>
-                <i class="fa-regular fa-comment-dots content-place"></i>
+                <i class="fa-regular fa-comment-dots content-place dashboard-icon" ></i>
                 <% end%>
               </div>
             <% end %>
 
             <div>
-              <i class="fa-solid fa-cube dashboard-icons"></i>
+              <%= link_to booking_3_model_path do %>
+                <i class="fa-solid fa-cube dashboard-icons dashboard-icon"></i>
+              <% end%>
             </div>
 
             <div class="p-class content-place">
@@ -60,13 +62,13 @@
               <% if booking.status == "pending"%>
                 <div>
                   <%= link_to booking_path(booking.id, status: "confirmed"), data: {turbo_method: :put} do %>
-                    <i class="fa-solid fa-square-check content-place"></i>
+                    <i class="fa-solid fa-square-check content-place dashboard-icon"></i>
                   <% end %>
                 </div>
 
                 <div>
                   <%= link_to booking_path(booking.id, status: "declined"), data: {turbo_method: :put}, class: " btn-danger" do %>
-                    <i class="fa-regular fa-circle-xmark content-place"></i>
+                    <i class="fa-regular fa-circle-xmark content-place dashboard-icon"></i>
                   <% end %>
                 </div>
               <% end %>
