@@ -16,9 +16,16 @@
       <ul class="navbar-nav me-auto">
 
         <% if user_signed_in? %>
+          <% if current_user.designer == nil %>
           <li class="nav-item active">
             <%= link_to "Dashboard", user_dashboard_path, class: "nav-link" %>
           </li>
+          <% else %>
+            <li class="nav-item active">
+            <%= link_to "Dashboard", designer_dashboard_path, class: "nav-link" %>
+          </li>
+          <% end %>
+
 
           <li class="nav-item">
             <%= link_to "About", "#", class: "nav-link" %>
@@ -36,12 +43,6 @@
               <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", "#", class: "dropdown-item" %>
-
-              <% if current_user.designer %>
-              <%= link_to "Requests", designer_dashboard_path, class: "dropdown-item" %>
-              <% end %>
-
-              <%= link_to "Dashboard", "/user_dashboard", class: "dropdown-item" %>
               <%= link_to " Contact us", "#", class: "dropdown-item" %>
               <%= link_to " Terms of use & Privacy Policy", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
