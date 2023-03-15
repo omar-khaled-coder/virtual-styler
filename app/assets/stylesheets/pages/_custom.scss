@@ -1,5 +1,15 @@
 
 .model-3d {
-  height: 1000px;
-  width: 1000px;
+  height: 500px;
+  width: 100%;
+}
+
+.model-item-image {
+  width: 100px;
+  height: 100px;
+}
+
+.preset-items {
+  position: relative;
+  z-index: 5;
 }
