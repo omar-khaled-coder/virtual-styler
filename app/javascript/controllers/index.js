@@ -7,6 +7,9 @@ import { application } from "./application"
 import BasketSumController from "./basket_sum_controller"
 application.register("basket-sum", BasketSumController)
 
+import ChatroomSubscriptionController from "./chatroom_subscription_controller"
+application.register("chatroom-subscription", ChatroomSubscriptionController)
+
 import CountItemController from "./count_item_controller"
 application.register("count-item", CountItemController)
 

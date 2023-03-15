@@ -1,5 +1,6 @@
 
 <div class="container mt-4 pb-4 px-0">
+
     <h1>Bookings</h1>
     <% if @bookings.empty? %>
       <h1>You don't have any bookings yet!</h1>
@@ -7,13 +8,11 @@
       <div class="booking-item" style="background-color: #d7d7d9;">
         <p class="p-class">Designer</p>
         <p class="p-class content-place">Booked on</p>
-        <p class="p-class content-place">Status button</p>
+        <p class="p-class content-place me-45px">Status</p>
         <p class="p-class content-place"> </p>
       </div>
       <% @bookings.each do |booking| %>
-
         <div class="booking-item">
-
           <div class="p-class dashboard-avatar">
             <%= cl_image_tag booking.designer.user.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle" %>
             <div class="designer-name-dashboard">
@@ -21,37 +20,38 @@
             </div>
           </div>
 
-          <div class="p-class content-place">
-          <%= booking.created_at.strftime("%B %d, %Y") %>
-          </div>
-
-
-          <div class="p-class content-place">
-          <%= booking.status %>
+          <div class="p-class content-place booking-date">
+            <%= booking.created_at.strftime("%B %d, %Y") %>
           </div>
 
           <div class="p-class content-place">
+            <p class=" content-place status-<%= booking.status %>"><%= booking.status %></p>
+          </div>
+
+          <div class="p-class content-place booking-date">
             <% if Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id) %>
-              <div><%= link_to chatroom_path(Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id)), class: "buttn-red-log-in" do %>
-                <i class="fa-regular fa-comment-dots content-place"></i>
+              <div>
+                <%= link_to chatroom_path(Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id)), class: "buttn-red-log-in" do %>
+                  <i class="fa-regular fa-comment-dots content-place"></i>
                 <% end %>
               </div>
             <% else %>
-              <div><%= link_to booking_chatrooms_path(booking), data: { turbo_method: :post }, class: "butten-red-log-in" do %>
-                <i class="fa-regular fa-comment-dots content-place"></i>
+              <div>
+                <%= link_to booking_chatrooms_path(booking), data: { turbo_method: :post }, class: "butten-red-log-in" do %>
+                  <i class="fa-regular fa-comment-dots content-place"></i>
                 <% end%>
               </div>
             <% end %>
-
             <div>
+                <%= link_to booking_3_model_path do %>
               <i class="fa-solid fa-cube dashboard-icons"></i>
+                <% end%>
             </div>
-
           </div>
-
-
 
         </div>
       <% end %>
     <% end %>
 </div>
+
+<%= console %>

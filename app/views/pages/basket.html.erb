@@ -12,6 +12,7 @@
       <span class="greyed-out">Pick a design</span>
     </a>
     <span class="greyed-in">> Payment</span>
+
   </legend>
   <h2 class="pt-4">Payment</h2>
 
@@ -22,8 +23,7 @@
       <div class="col-12 col-lg-6 mb-5 order-2 order-lg-1 ps-0 pe-2">
         <div class="payment-right" style="position: relative;">
           <h3>Order Summary</h3>
-          <div class="row item preset-items-basket" style="margin-left: 0px;">
-            <div data-controller="basket-sum">
+          <div class="row item preset-items-basket" style="margin-left: 0px;">            <div data-controller="basket-sum">
               <%@cart_items.each do |cart_item|%>
                 <div class="d-flex item-card align-items-center mb-2" data-basket-sum-target="sum">
                   <%= cl_image_tag cart_item.item.photo.key, :width=>80,:height=>80, :crop=>"fill", class: "item-image p-2"  %>

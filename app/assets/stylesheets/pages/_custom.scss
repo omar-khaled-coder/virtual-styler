@@ -1,5 +1,33 @@
 
 .model-3d {
-  height: 1000px;
-  width: 1000px;
+  height: 500px;
+  width: 100%;
+}
+
+.model-item-image {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.preset-items {
+  position: relative;
+  z-index: 5;
+}
+
+
+.checkout {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.total {
+  margin-bottom: 0px;
+}
+
+.model-image-container {
+  border: 1px solid rgba(112, 110, 110, 0.5);
+  border-radius: 15px;
 }
