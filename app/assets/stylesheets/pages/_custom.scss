@@ -5,11 +5,29 @@
 }
 
 .model-item-image {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  border-radius: 15px;
 }
 
 .preset-items {
   position: relative;
   z-index: 5;
+}
+
+
+.checkout {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.total {
+  margin-bottom: 0px;
+}
+
+.model-image-container {
+  border: 1px solid rgba(112, 110, 110, 0.5);
+  border-radius: 15px;
 }
