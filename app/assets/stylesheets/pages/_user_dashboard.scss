@@ -1,6 +1,6 @@
 .status-pending {
-  color: #b14f05;
-  background-color: #e7a878;
+  color: #965E00;
+  background-color: #FFECCC;
   text-align: center;
   padding: 8px 20px;
   border-radius: 50px;
@@ -10,8 +10,8 @@
 }
 
 .status-confirmed {
-  color: #0a7414;
-  background-color: #4db757;
+  color: #007F00;
+  background-color: #CDFFCD;
   text-align: center;
   padding: 8px 13px;
   border-radius: 50px;
@@ -20,8 +20,8 @@
 }
 
 .status-declined {
-  color: #b11111;
-  background-color: #eb5f5f;
+  color: #FF1F1F;
+  background-color: #FFA9A9;
   text-align: center;
   padding: 8px 20px;
   border-radius: 50px;
@@ -35,4 +35,12 @@
 
 .booking-date {
   margin-bottom: 10px;
+}
+
+.fa-square-check {
+  color: #007F00;
+}
+
+.fa-circle-xmark {
+  color: #FF1F1F;
 }
