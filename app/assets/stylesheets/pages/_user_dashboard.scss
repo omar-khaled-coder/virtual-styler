@@ -2,28 +2,28 @@
   color: #b14f05;
   background-color: #e7a878;
   text-align: center;
-  padding: 8px 24px;
+  padding: 8px 20px;
   border-radius: 50px;
   width : 100px;
   margin-bottom: 10px;
 
 }
 
-.status-accepted {
+.status-confirmed {
   color: #0a7414;
   background-color: #4db757;
   text-align: center;
-  padding: 8px 24px;
+  padding: 8px 13px;
   border-radius: 50px;
   width : 100px;
   margin-bottom: 10px;
 }
 
-.status-denied {
+.status-declined {
   color: #b11111;
-  background-color: #ce4141;
+  background-color: #eb5f5f;
   text-align: center;
-  padding: 8px 24px;
+  padding: 8px 20px;
   border-radius: 50px;
   width : 100px;
   margin-bottom: 10px;
@@ -31,4 +31,8 @@
 
 .me-45px {
   margin-right: 45px !important;
+}
+
+.booking-date {
+  margin-bottom: 10px;
 }
