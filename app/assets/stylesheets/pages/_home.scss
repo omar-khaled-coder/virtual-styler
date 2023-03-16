@@ -3,10 +3,12 @@
 .home-page-container {
   display: flex;
   height: 90vh;
-}
-
-.home-page-container {
   background-color: $gray;
+  background-image: asset-url('main-banner.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 800px;
+  background-position-y: 35px;
 }
 
 .left-container {
@@ -30,7 +32,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: $gray;
   justify-content: flex-end;
 }
 
