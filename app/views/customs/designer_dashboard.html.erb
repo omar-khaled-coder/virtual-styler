@@ -59,9 +59,9 @@
 
             <div class="p-class content-place">
 
-              <% if booking.status == "pending"%>
+              <% if booking.status == "designing"%>
                 <div>
-                  <%= link_to booking_path(booking.id, status: "confirmed"), data: {turbo_method: :put} do %>
+                  <%= link_to booking_path(booking.id, status: "completed"), data: {turbo_method: :put} do %>
                     <i class="fa-solid fa-square-check content-place dashboard-icon"></i>
                   <% end %>
                 </div>
