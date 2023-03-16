@@ -13,68 +13,65 @@
       </div>
       <% @bookings.each do |booking| %>
         <div class="booking-item">
+
           <div class="p-class dashboard-avatar">
             <%= cl_image_tag booking.designer.user.avatar.key, height: 41, width: 50, crop: :fill, class: "avatar dropdown-toggle" %>
+
             <div class="designer-name-dashboard">
               <%= booking.designer.user.first_name %>
             </div>
+
           </div>
 
           <div class="p-class content-place booking-date">
             <%= booking.created_at.strftime("%B %d, %Y") %>
           </div>
 
-
-
-
-
-
-
           <div class="p-class content-place">
             <p class=" content-place status-<%= booking.status %>"><%= booking.status %></p>
           </div>
 
 
-
-
-
-
           <div class="p-class content-place booking-date">
             <% if Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id) %>
+
               <div>
                 <%= link_to chatroom_path(Chatroom.find_by(user_id: current_user.id, designer_id: booking.designer.id)), class: "buttn-red-log-in" do %>
                   <i class="fa-regular fa-comment-dots content-place dashboard-icon" ></i>
                 <% end %>
               </div>
+
             <% else %>
+
               <div>
                 <%= link_to booking_chatrooms_path(booking), data: { turbo_method: :post }, class: "butten-red-log-in" do %>
                   <i class="fa-regular fa-comment-dots content-place dashboard-icon" ></i>
                 <% end%>
               </div>
+
             <% end %>
-            <div>
 
-
-
-                <% if booking.status == "confirmed" %>
-                  <%= link_to booking_3_model_path do %>
-                  <i class="fa-solid fa-cube dashboard-icons dashboard-icon" ></i>
-                <% end%>
-                <% else %>
-                  <%= link_to booking_3_spec_path do %>
-                  <i class="fa-regular fa-file dashboard-icons dashboard-icon"></i>
-                  <% end %>
-                <% end %>
-
-
-
-
-
-
+            <div class=" content-place ">
+            <%= link_to booking_3_spec_path do %>
+             <i class="fa-regular fa-file dashboard-icons dashboard-icon"></i>
+            <% end %>
             </div>
-          </div>
 
+
+            <div class="content-place">
+
+              <% if booking.status == "confirmed" %>
+
+                <%= link_to booking_3_model_path do %>
+                <i class="fa-solid fa-cube dashboard-icons dashboard-icon" ></i>
+                <% end%>
+
+              <% else %>
+                <i class="fa-solid fa-cube dashboard-icons dashboard-icon" style="color:#d8d8d8;"></i>
+              <% end %>
+            </div>
+
+          </div>
         </div>
       <% end %>
     <% end %>
