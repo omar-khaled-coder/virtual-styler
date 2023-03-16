@@ -1,0 +1,27 @@
+.message-row {
+  margin-bottom: 10px;
+  padding: 12px;
+}
+
+// To style the message itself
+.sender-style, .receiver-style {
+  min-width: 25%;
+  max-width: 65%;
+  border-radius: 4px;
+  padding: 12px;
+  min-height: 80px;
+}
+
+.sender-style {
+  background-color: #f2bd9c;
+}
+
+.receiver-style {
+  background-color: $light-gray;
+}
+
+.bold-chat-user {
+  font-family: helvetica;
+  font-weight: bolder;
+  color: $gray;
+}

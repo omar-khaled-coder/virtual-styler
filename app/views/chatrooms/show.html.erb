@@ -9,10 +9,16 @@
                <%= @chat_with_user.first_name %> <code class="color-name"> <%= @chat_with_user.designer? ? "Designer" : "Client" %></code></h4>
 
   <div class="messages" data-chatroom-subscription-target="messages">
+
     <% @chatroom.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
+      <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+        <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+          <%= render "messages/message", message: message %>
+        </div>
+      </div>
     <% end %>
   </div>
+
 
 
   <%= simple_form_for [@chatroom, @message],
