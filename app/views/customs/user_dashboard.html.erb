@@ -30,17 +30,9 @@
 
 
 
-
-
-
-
           <div class="p-class content-place">
             <p class=" content-place status-<%= booking.status %>"><%= booking.status %></p>
           </div>
-
-
-
-
 
 
 
@@ -62,9 +54,24 @@
               </div>
             <% end %>
             <div>
-                <%= link_to booking_3_model_path do %>
-              <i class="fa-solid fa-cube dashboard-icons dashboard-icon" ></i>
+
+
+
+                <% if booking.status == "confirmed" %>
+                  <%= link_to booking_3_model_path do %>
+                  <i class="fa-solid fa-cube dashboard-icons dashboard-icon" ></i>
                 <% end%>
+                <% else %>
+                  <%= link_to booking_3_spec_path do %>
+                  <i class="fa-regular fa-file dashboard-icons dashboard-icon"></i>
+                  <% end %>
+                <% end %>
+
+
+
+
+
+
             </div>
           </div>
 
