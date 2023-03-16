@@ -49,16 +49,16 @@ puts "items destroyed"
 puts "starting to seed"
 puts "creating demo user"
 
-john = User.create!({
-  first_name: "John",
-  last_name: "Doe",
-  email: "john@gmail.com",
+ante = User.create!({
+  first_name: "Ante",
+  last_name: "Andrijasevic",
+  email: "ante@gmail.com",
   password: "123456"
 })
-puts "created user John Doe, email: john@gmail.com password: 123456"
-puts "attaching John's avatar"
-john.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678248781/team-1_vmn52o.jpg')), filename: 'john.png', content_type: 'image/png')
-puts "attached John's avatar"
+puts "created user ante, email: ante@gmail.com password: 123456"
+puts "attaching ante's avatar"
+ante.avatar.attach(io: File.open(URI.open('https://res.cloudinary.com/dxgkclowd/image/upload/v1678949211/114177855_j9utcy.jpg')), filename: 'ante.png', content_type: 'image/png')
+puts "attached ante's avatar"
 
 lily = User.create!({
   first_name: "Lily",
