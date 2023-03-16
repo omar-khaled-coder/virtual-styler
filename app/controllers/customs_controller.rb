@@ -42,6 +42,9 @@ class CustomsController < ApplicationController
 
   end
 
+  def spec
+
+  end
   private
   def booking_params
     params.require(:booking).permit(:spec_text, :spec_file, :designer)

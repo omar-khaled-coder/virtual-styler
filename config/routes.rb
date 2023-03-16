@@ -35,6 +35,7 @@ Rails.application.routes.draw do
 
   get "/booking/3/model", to: "customs#model"
   get "/booking/3/model/checkout", to: "customs#model_checkout"
+  get "/booking/3/spec", to: "customs#spec"
 
 
 
