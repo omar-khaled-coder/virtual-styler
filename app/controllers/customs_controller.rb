@@ -22,7 +22,7 @@ class CustomsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     @booking.designer_id = params[:designer]
-    @booking.status = "pending"
+    @booking.status = "designing"
     @booking.save
     redirect_to user_dashboard_path
   end

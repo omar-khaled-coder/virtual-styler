@@ -9,7 +9,7 @@
 
           <%= simple_form_for @booking, url: customs_path(designer: @designer) do |f| %>
             <%= f.input :spec_file, as: :file %>
-            <%= f.input :spec_text %>
+            <%= f.input :spec_text,:input_html => { 'rows' => 10, 'cols' => 10 } %>
               <p> Please fill in the form as detailed as possible.
                 Provide your room dimensions, furnitures, and any other information that you think is relevant.
                 We will get back to you as soon as possible.
